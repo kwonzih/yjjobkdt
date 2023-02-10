@@ -1,0 +1,567 @@
+#conclassBG
+{
+    width: 100%;
+    /* height: 3200px; */
+    position: relative;
+    /* border: 1px solid blue; */
+    
+    background:#51A8FF;
+
+}
+
+/* IT과정안내 탭 */
+#conClassTab
+{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 128px ;
+    padding-bottom: 55px ;
+}
+#conClassTab .tab
+{
+    height:48px;
+    border-radius:48px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    background:#fff;
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5px;
+    padding-left: 2%;
+}
+#conClassTab .tab .tabIcon img
+{
+     width: 30px;
+}
+
+
+#conClassTab .tabTitle 
+{
+    font-weight: 700;
+   
+}
+
+
+#conClassTab #tab1
+{
+    width: 128px;
+    
+}
+#conClassTab .on
+{
+    background-color: #0D1A5A;
+}
+#conClassTab #tab2
+{
+    width: 226px;
+}
+#conClassTab #tab3
+{
+    width: 183px;
+}
+#conClassTab #tab4
+{
+    width: 233px;
+}
+
+
+
+
+ /* IT과정안내 아이템(세부내용5개) */
+ #conClassItem
+ {
+     text-align: center;
+
+ }
+
+#conClass  #conClassTab  .on {
+    
+    background:#132C67;
+    color: #fff;
+}
+
+#conClass > #conClassItem >  
+.conClassItem_1, .conClassItem_2,
+.conClassItem_3, .conClassItem_4 
+{
+    display: none;
+}
+
+#conClass > #conClassItem > .on
+{
+    display: block;
+}
+
+#conclass .conContents
+{
+
+    height: 500px;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-around;
+    margin-top: 120px;
+    /* position: absolute;
+    top: 66.52rem ;
+    left: 50%; 
+    transform: translate(-50%,-50%);*/
+}
+#conClassItem  .conIcon
+{
+    background-color: #fff;
+    position: relative;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 16%) ;
+
+
+}
+#conClassItem  .conIcon img
+{
+    height: 130px;
+    width: 130px;
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    transform: translateY(-50%);
+}
+
+
+
+
+/* IT과정안내 아이템(타이틀) */
+section#conClass .conTitles
+{
+    color: #000;
+}
+section#conClass .conSubTitle
+{
+    font-size: 1.75rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+section#conClass .conTitle
+{
+    font-size: 55px;
+    margin-top: 10px;
+    margin-bottom: 55px;
+    font-weight: 900;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 16%);
+}
+
+/* IT과정안내 아이템(내용) */
+
+section#conClass .conTxt
+{
+    width: 70vw;
+    /* height: 300px; */
+    /* border: 1px solid blue; */
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+section#conClass .conTxt .conTxtBox
+{
+    height: 80px;
+    display: flex;
+    position: relative;
+    margin-bottom: 30px;
+    
+}
+section#conClass .conTxt .conTxtBox .num
+{
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+    background: #0D1A5A;
+    color: #fff;
+    font-weight:800;
+    font-size: 40px;
+    position: absolute;
+    left: 0px;
+    padding-top: 18px;
+    box-sizing: border-box;
+
+}
+section#conClass .conTxt .conTxtBox .num_txt
+{
+    height:80px;
+    width: 100%;
+    border-radius: 80px;
+    background: #fff;
+    padding-top: 30px;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+/* 점3개 */
+
+.conPoint
+{
+    margin: 0 auto;
+    width: 16px;
+}
+
+.conPoint div 
+{
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+/* conComment */
+.conComment
+{
+    font-size: 48px;
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 70px;
+}
+.conComment .yellow
+{
+    color: yellow;
+}
+.conComment .black
+{
+    color: black;
+}
+
+
+
+
+
+/* IT과정안내 아이템(리뷰) */
+.conClassReview
+{
+/* border: 1px solid blue; */
+margin-top: 120px;
+}
+.conClassReview .conClassRV_content
+{
+
+width: 70%;
+height: 200px;
+margin: 80px auto;
+overflow: hidden;
+box-sizing: border-box;
+transition:0.5s all; 
+z-index:-1; 
+/* display:none; */ 
+}
+.conClassReview .conClassRV_content.active
+{
+/* display:inherit; */ 
+opacity:1; 
+z-index:1;
+}
+
+
+.conClassReview .tab_slide 
+{
+opacity:1; 
+transition:opacity 0.3s;
+}
+
+.conClassRV_title
+{
+font-size: 55px;
+font-weight: 900;
+color: #000;
+text-shadow: 0 0 6px rgba(0, 0, 0, 16%);
+
+
+}
+.conClassReview .tab_slideCon
+{
+
+position: relative;
+
+}
+.conClassReview .slick-list
+{
+height:145px;
+}
+.conClassReview .conClassRV_name
+{
+
+color: #fff;
+background-color: #0D1A5A;
+width: 18%;
+height: 145px;
+padding-top: 50px;
+}
+.conClassReview .conClassRV_txt
+{
+position: absolute;
+top:0;
+left: 18%;
+background-color: #fff;
+border:1px solid #0D1A5A;
+/* 공간잘림 현상 */
+/* width:90%; */
+height: 145px;
+
+}
+.conClassReview .conClassRV_txt p{
+margin: 5%;
+
+}
+
+.conClassReview .slick-arrow
+{
+opacity: 0;
+}
+
+
+/* IT과정안내 아이템(포트폴리오) */
+.conClassPF
+{
+height: 33rem;
+width: 100%;
+margin-top: 80px;
+/* border: 1px solid blue; */
+}
+.conClassPF_title
+{
+font-weight: bolder;
+font-size: 3rem;
+padding-left: 100px;
+}
+
+.conClassPF .conClassPF_content 
+{   
+margin-top: 3.125rem;
+overflow: hidden;
+box-sizing: border-box;
+width: 100vw;
+/* height: 630px; */
+transition:0.5s all; 
+z-index:-1; 
+/* display:none; */
+
+}
+.conClassPF .conClassPF_content.active
+{
+ /* display:inherit; */ 
+ opacity:1; 
+ z-index:1;
+}
+
+
+.conClassPF .tab_slides
+{
+opacity:1; 
+/* transition:opacity 0.3s; */
+display: flex;
+justify-content: space-between;
+
+}
+
+
+.conClassPF .tab_slide img
+{
+opacity:1; 
+width: 640px;
+height: 360px;
+overflow: hidden;
+margin:0 24px;
+}
+.conClassPF .slick-arrow
+{
+opacity: 0;
+}
+@media screen and (max-width:1024px) {
+    #conClassTab
+{
+   
+    width: 100%;
+    display: flex; 
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: 5%;
+   
+}
+
+#conClassTab .tab
+{
+ margin-bottom: 20px;
+ font-size: 16px;
+ font-weight: 500;
+ margin-right: 10px;
+ padding: 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+}
+#conClassTab .tabIcon
+{
+    display: none;
+}
+
+#conClassTab tab:nth-child(1)
+{
+ width: 90px;    
+}
+#conClassTab tab:nth-child(2)
+{
+ width: 168px;    
+}
+#conClassTab tab:nth-child(3)
+{
+ width: 141px;  
+
+}
+#conClassTab tab:nth-child(4)
+{
+ width: 167px;    
+}
+#conClassItem .conSubTitle
+{
+    font-size: 16px!important;
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+section#conClass .conTitle
+{
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 32px;
+}
+section#conClass .conTxt .conTxtBox
+{
+    height: 48px;
+}
+section#conClass .conTxt .conTxtBox .num
+{
+    height: 48px;
+    width: 48px;
+    font-size: 24px;
+    padding-top: 10px;
+}
+section#conClass .conTxt .conTxtBox .num_txt
+{
+    height: 48px;
+    font-size: 14px;
+    padding-top: 2%;
+    padding-left: 15%;
+    padding-right: 10%;
+   
+}
+section#conClass .conTxt
+{
+    margin-bottom: 24px;
+}
+section#conClass .conPoint div
+{
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+   
+}
+section#conClass .conComment
+{
+    font-size: 24px;
+    margin-top: 24px;
+    margin-bottom :25px;
+}
+
+/* 세부내용 5가지 모바일 슬릭 슬라이드 */
+.slick_M
+{
+    position: relative;
+    padding-top: 24px;
+}
+.slick_M .slick-arrow
+{
+    position:absolute;
+    z-index:10;
+    top:50%;
+    transform:translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius:100%;
+    background-color: transparent;
+    border:4px solid #fff;   
+    display: block; 
+}
+.slick_M .slick-arrow::before
+{
+    font-family: 'xeicon';
+    font-weight: 300;
+    font-size: 32px;
+    color: #fff;
+}
+.slick_M .slick-prev {left: 25px; font-size: 0; color: transparent;}
+.slick_M .slick-prev::before 
+{
+    content: '\e906';
+    
+}
+.slick_M .slick-next {right:25px ;font-size: 0; color: transparent;}
+.slick_M .slick-next::before 
+{
+    content: '\e907';
+    
+
+}
+#conClass .conIcon
+{
+    position: relative;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 16%) ;
+
+}
+#conClass .conIcon img
+{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+.conClassPF .tab_slide img
+{
+    width: 238px;
+    height: 134px;
+    margin-right: 10px;
+}
+.conClassReview
+{
+    margin-top: 40px;
+     
+}
+.conClassRV_title
+{
+    font-size: 24px;
+
+
+}
+.conClassReview .conClassRV_content
+{
+    margin: 10px auto;
+
+}
+.conClassPF
+{
+    margin-top: 35px;
+    height: 230px;
+}
+.conClassPF_title
+{
+    font-size: 24px;
+    padding-left: 24px;
+    display: flex;
+    flex-direction: row;
+}
+.conClassPF .conClassPF_content 
+{
+    margin-top: 0px;
+    
+}
+}

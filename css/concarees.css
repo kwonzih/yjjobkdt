@@ -1,0 +1,116 @@
+/* #conCareer */
+#conCareer {
+    width: 90%;
+    margin: 0 auto;
+    padding-block: 96px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#conCareerGrp {
+    width: 100%;
+    height: 320px;
+    margin-top: 32px;
+    padding-inline: 16px;
+    border-bottom: 1px solid #4c90e4;
+    border-left: 1px solid #4c90e4;
+    display: flex;
+    justify-content: space-around;
+}
+
+#conCareerGrp li p {
+    font-size: 1rem;
+}
+
+    #conCareerGrp li div
+    {
+        width: 20%;
+        height: 320px;
+        /* background-color: #ccc; */
+        position: relative; 
+        border-radius: 15px 15px 0 0;
+        
+    }
+
+    #conCareerGrp li div span
+    {
+        position: absolute;
+        bottom: 0;
+        height: 320px;
+        font-size: 28px;
+        color: transparent;
+        text-align: center;
+        background-color: #05207B;
+        border-radius: 15px 15px 0 0;
+        padding-top: 10px;
+
+    }
+   
+    #conCareerGrp .grp_1
+    {
+        height:10%;
+        background-color: #05207B;
+        /* animation:stack1 1s 1; */
+    }
+     /* @keyframes stack1 {
+        0% { height : 0; color: rgba(255,255,255,0);}
+        40%{ color: rgba(255,255,255,1);}
+        100% { height : 80%;} */
+    
+    #conCareerGrp .grp_2
+    {
+        background-color: #05207B;
+        height:10%;
+        /* animation:stack2 1s 1; */
+
+    } 
+   
+    #conCareerGrp .grp_3
+    {
+        background-color: #05207B;
+        height:10%;
+        /* animation:stack3 1s 1; */
+
+    } 
+    /* @keyframes stack3 {
+        0% { height : 0; color: rgba(255,255,255,0);}
+        40%{ color: rgba(255,255,255,1);}
+        100% { height : 87%;}
+    } */
+    #conCareerGrp .grp_4
+    {
+        background-color: #05207B;
+        height:10%;
+        /* animation:stack4 1s 1; */
+
+    }
+    /* @keyframes stack4 {
+        0% { height : 0; color: rgba(255,255,255,0);}
+        40%{ color: rgba(255,255,255,1);}
+        100% { height : 89.3%;}
+    } */
+
+
+/* #conCareer .conTitles */
+#conCareer .conTitles {
+    text-align: center;
+}
+
+#conCareer .conTitle {
+    margin-bottom: 16px;
+    text-align: center;
+    font-family: 'GmarketSansBold';
+    font-size: 32px;
+    background: linear-gradient(140deg, #a650fa,#4c90e4, #557aea);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+#conCareer .conTitle > .animate {
+    font-family: 'GmarketSansBold';
+}
+
+#conCareer .conTxt {
+    font-size: 14px;
+}

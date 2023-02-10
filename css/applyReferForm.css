@@ -1,0 +1,193 @@
+
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* 온라인접수 & 상담신청 입력폼 */
+#conForm {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+/* 제목 */
+#conForm > #conFormTitle > h1 {
+    text-align: center;
+}
+/* 폼 박스 */
+#conForm > #conFormBox {
+    max-width: 1152px;
+    margin: 0 auto;
+}
+
+/* 입력폼 내용 */
+.formContent {
+    background-color: #f9feff;
+    display: flex;
+    flex-direction: column; /* 플렉스 요소 수직 방향 위에서 아래로 */
+    align-items: center; /* 플렉스 요소를 플렉스 컨테이너 수직 중앙에 배치 */
+    margin-top: 10px;
+    padding-top: 30px;
+}
+.formContent > div {
+    width: 80%;
+    margin-bottom: 32px;
+}
+.formContent > .flex > section:first-child {
+    margin-bottom: 32px;
+}
+.formContent p {
+    margin-bottom: 8px;
+    color: #39538a;
+    font-weight: bolder;
+    font-size: 14px;
+}
+.formContent span {
+    color: #ff00e6;
+}
+.formContent input[type=text], 
+.formContent input[type=date],
+.formContent select,
+.formContent textarea {
+    width: 100%;
+    height: 42px;
+    background-color: transparent;
+    border-color: #39538a;
+    padding: 10px;
+}
+.formContent input[type=text],
+.formContent input[type=date] {
+    border: none;
+    border-bottom: 1px solid #39538a;
+}
+/* 성별 입력 */
+.genderInput {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+.genderInput > .radio {
+    width: 45%;
+    height: 42px;
+    border: 1px solid #39538a;
+}
+.genderInput > .radio > input[type=radio] {
+    display: none;
+}
+.genderInput > .radio > label {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    height: -webkit-fill-available;
+    line-height: 42px;
+}
+/* 체크된 버튼 활성화 */
+.genderInput > .radio > input[type=radio]:checked + label {
+    background-color: #39538a;
+    color: white;
+}
+/* 시간 입력 */
+.timeInput {
+    display: flex;
+    align-items: center;
+}
+.timeInput > span {
+    color: #39538a;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/* 문의글 입력 */
+.questionInput > textarea {
+    height: 100px;
+}
+
+/* 입력폼 버튼 */ 
+.formBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+}
+.formBtn button {
+    border: 1px solid #39538a;
+    outline: none;
+    width: 160px;
+    height: 42px;
+    text-align: center;
+}
+.resetBtn {
+    background-color: white;
+    color: #39538a;
+    margin-right: 20px;
+}
+.submitBtn {
+    background-color: #39538a;
+    color: #fbb902;
+}
+
+
+/* PC 화면(~1024px) */
+@media screen and (min-width: 1024px) {
+
+    /* 입력폼 내용 */
+    .formContent {
+        margin-top: 36px;
+        padding-top: 40px;
+    }
+    .formContent > div {
+        width: 82%;
+        margin-bottom: 34px;
+    }
+    .formContent > div > section {
+        display: flex;
+        flex-basis: auto;
+        align-items: center;
+    }
+    .formContent > div > section > div {
+        width: auto;
+        flex: 1;
+    }
+    .formContent > .flex {
+        display: flex;
+        flex-basis: auto;
+        align-items: center;
+    }
+    .formContent > .flex > section {
+        width: auto;
+        flex: 1;
+    }
+    .formContent > .flex > section:first-child {
+        margin-right: 25px;
+        margin-bottom: 0;
+    }
+    .formContent p {
+        margin-right: 10px;
+        width: 104px;
+        font-size: 15px;
+    }
+    .genderInput {
+        justify-content: flex-start;
+        padding: 0;
+    }
+    .genderInput > .radio {
+        width: 20%;
+    }
+
+    /* 입력폼 버튼 */
+    .formBtn {
+        margin-top: 44px;
+    }
+    .formBtn button {
+        width: 200px;
+        height: 46px;
+        font-size: 15px;
+    }
+    .resetBtn {
+        margin-right: 26px;
+    }
+}

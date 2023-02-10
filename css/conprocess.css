@@ -1,0 +1,177 @@
+#conProcess
+{
+    padding-bottom: 190px;
+    
+}
+#conProcess .conTitles
+{
+    text-align: center;
+}
+#conProcess .conSubTitle
+{
+    padding-top: 180px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #0D1A5A;
+
+}
+
+#conProcess .conTitle
+{
+    font-size: 55px;
+    font-weight: 900;
+    color: #313131;
+
+}
+#conProcess .conContents
+{
+    padding-top: 50px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+#conProcess .conIcon
+{
+    position: relative;
+    background-color: #fff;
+    border:6px solid #0D1A5A;
+}
+
+#conProcess .conIcon img
+{
+    height: 170px;
+    position: absolute;
+    left: 25%;
+    top: 0;
+    padding-top: 60px;
+}
+#conProcess .conIcon::after
+{
+    content:"";
+    position: absolute;
+    left: 320px;
+    top: 50%;
+    transform:translateY(-50%) ;
+    border: 23px solid;
+    border-color: transparent transparent transparent #27261E ;
+}
+#conProcess .last::after
+{
+    opacity: 0;
+}
+
+
+
+
+#conProcess .conContTitle
+{
+    font-size: 29px;
+    color: #0D1A5A;
+    font-weight: 900;
+}
+
+#conProcess .conContTxt
+{
+    font-size: 21px;
+    font-weight: 500;
+
+}
+#conProcess .conContBottom p
+{
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 19px;
+}
+@media screen and (max-width:1024px) {
+    #conProcess
+{
+    padding-bottom: 100px;
+}
+#conProcess .conSubTitle
+{
+    padding-top: 76px;
+    font-size: 16px;
+    
+}
+#conProcess .conTitle
+{
+    font-family: 'GmarketSansMedium';
+    font-size: 32px;
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+
+/* 슬릭 슬라이더 */
+#conProcess .conIcon::after
+{
+    display: none;
+    
+}
+.swiper-wrapper
+{
+    max-width: 100vw;
+    width: 100%;
+}
+#conProcess .swiper-arrow::after
+{
+    position:absolute;
+    z-index:10;
+    top:40%;
+    transform:translateY(-40%);
+    width: 48px;
+    height: 48px;
+    border-radius:100%;
+    background-color: transparent;
+    border: 3px solid #0D1A5A;  
+    display: block; 
+    color: transparent;
+}
+#conProcess .swiper-arrow::before
+{
+    width: 100%;
+    height: 100%;
+    font-family: 'xeicon';
+    font-weight: 300;
+    font-size: 32px;
+    align-items: center;
+    justify-content: center;
+    color: #0D1A5A;
+}
+
+
+    #conProcess .conContents
+{
+    display: flex;
+    justify-content: center;
+    
+}
+#conProcess .conIcon
+{
+    position: relative;
+}
+#conProcess .conIcon img
+{
+    position: absolute;
+    left: 50%;
+    top: 18%;
+    transform: translateX(-50%);
+    
+    padding-top: 0;
+    width: 115px;
+    height: 115px;
+}
+#conProcess .conContTitle
+{
+    font-size: 20px;
+
+}
+#conProcess .conContTxt
+{
+    font-size: 16px;
+}
+#conProcess .conContBottom p:nth-child(2)
+{
+    color: #757575;
+}
+}

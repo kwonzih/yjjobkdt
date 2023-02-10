@@ -1,0 +1,168 @@
+#conKDT
+    {   
+        text-align: center;
+        padding-top: 180px;
+        padding-bottom: 200px;
+        background-color: #EEF7FF;
+        /* border: 1px solid blue; */
+        
+    }
+    
+
+    /* Scroll Animation (sa, 스크롤 애니메이션) */
+    .sa 
+    {
+        opacity: 0;
+        transition: all 1s ease;
+    }
+
+    /* 아래에서 위로 페이드 인 */
+    .sa-up 
+    {
+        transform: translate(0, 100px);
+    }
+
+
+   .sa.show
+    {
+        opacity: 1;
+        transform: none;
+    }
+
+    #conKDT .conTitles
+    {
+
+        height: 100px;
+        /* border: 1px solid blue; */
+        box-sizing: border-box;
+        width: 67%;
+        margin: 0 auto;
+        align-items: center;
+    }
+    #conKDT .conSubTitle
+    {
+        padding-bottom: 10px;
+        font-size: 28px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #conKDT .conTitle 
+    {
+        font-size: 48px;
+        font-weight: 900;
+        /* border: 1px solid blue; */
+        
+    }
+    .conContents
+    {
+        /* width: 1536px; */
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        padding-top: 100px;
+        
+    }
+    .conIcon
+    {
+        width: 236px;
+        height: 236px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        background-color: #23FF39;
+        border-radius: 50%;
+        
+    }
+    #conKDT .conIcon {
+        background-color: #fff;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 16%) ;
+    }
+    #conKDT .conIcon img{
+        width: 170px;
+        padding-top: 35px;
+    }
+    
+
+    .conContBottom
+    {
+        margin: 10px auto;
+    }
+
+    .conContTitle
+    {
+        font-size: 29px;
+        font-weight: 900;
+        margin: 20px auto;
+    }
+    .conContTxt
+    {
+        font-size: 17px;
+        font-weight: 700;
+    }
+    #conKDT .conContTxt p:nth-child(1)
+    {
+        font-weight: 700;
+
+    }
+    #conKDT .conContTxt p:nth-child(2)
+    {
+        font-weight: 600;
+        margin-top: 19px;
+        color: #CBCBCB;
+    }
+    @media screen and (max-width:1024px) {
+        #conKDT .conTitles
+{
+    margin-bottom: 60px;
+}
+#conKDT .conSubTitle
+{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 16px;
+}
+#conKDT .conTitle
+{
+    font-size: 32px;
+}
+#conKDT .conContents
+{
+    width: 100vw;
+    display:flex;
+    flex-direction: column; 
+    padding-top: 20px;
+}
+#conKDT .conConBox
+ {
+    margin-bottom: 25px;
+ }
+ .conIcon
+ {
+    width: 160px;
+    height: 160px;
+    padding-top: 0;
+
+ }
+ #conKDT  .conIcon img
+{
+   padding-top: 25px;
+   width: 106px; 
+}
+#conKDT .conContTitle
+ {
+    font-size: 20px;
+ }
+ #conKDT .conConTxt
+ {
+    font-size: 16px;
+ }
+ #conKDT .conConTxt p:nth-child(2)
+ {
+    font-size: 14px;
+ }
+
+    }

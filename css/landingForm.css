@@ -1,0 +1,399 @@
+
+
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
+/* 온라인접수 & 상담신청 입력폼 */
+#conForm {
+    padding-top: 50px;
+    margin-bottom: 200px; /* 바로 위 과정설명 섹션과의 여백 */
+
+}
+
+/* 탭 버튼 */
+#conForm > #conFormTab {
+    display: flex;
+    justify-content: center;
+}
+#conForm > #conFormTab > div {
+    width: 190px;
+    height: 54px;
+    background-color: transparent;
+    border: 2px solid #39538a;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#conForm > #conFormTab > div:nth-child(1){
+    margin-right: 20px;
+}
+#conForm > #conFormTab > div > img {
+    display: none;
+    filter: invert(31%) sepia(10%) saturate(2898%) hue-rotate(183deg) brightness(96%) contrast(90%);
+}
+#conForm > #conFormTab > div > p {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #39538a;
+    font-weight: bolder;
+}
+/* on : 활성화된 탭 */
+#conForm > #conFormTab > div.on {
+    background-color: #39538a;
+}
+#conForm > #conFormTab > div.on > p {
+    color: white;
+}
+#conForm > #conFormTab > div.on > img {
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(95deg) brightness(113%) contrast(98%); 
+}
+
+/* 폼 박스 */
+#conForm > #conFormBox {
+    max-width: 1152px;
+    margin: 0 auto;
+}
+#conForm > #conFormBox > div {
+    display: none;
+}
+/* on : 활성화된 박스 */
+#conForm > #conFormBox > div.on {
+    display: block;
+}
+
+/* 입력폼 내용 */
+.formContent {
+    background-color: #f9feff;
+    display: flex;
+    flex-direction: column; /* 플렉스 요소 수직 방향 위에서 아래로 */
+    align-items: center; /* 플렉스 요소를 플렉스 컨테이너 수직 중앙에 배치 */
+    margin-top: 10px;
+    padding-top: 30px;
+}
+.formContent > div {
+    width: 80%;
+    margin-bottom: 32px;
+}
+.formContent > .flex > section:first-child {
+    margin-bottom: 32px;
+}
+.formContent p {
+    margin-bottom: 8px;
+    color: #39538a;
+    font-weight: bolder;
+    font-size: 14px;
+}
+.formContent span {
+    color: #ff00e6;
+}
+.formContent input[type=text], 
+.formContent input[type=date],
+.formContent select,
+.formContent textarea {
+    width: 100%;
+    height: 42px;
+    background-color: transparent;
+    border-color: #39538a;
+    padding: 10px;
+}
+.formContent input[type=text],
+.formContent input[type=date] {
+    border: none;
+    border-bottom: 1px solid #39538a;
+}
+/* 성별 입력 */
+.genderInput {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+.genderInput > .radio {
+    width: 45%;
+    height: 42px;
+    border: 1px solid #39538a;
+}
+.genderInput > .radio > input[type=radio] {
+    display: none;
+}
+.genderInput > .radio > label {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    height: -webkit-fill-available;
+    line-height: 42px;
+}
+/* 체크된 버튼 활성화 */
+.genderInput > .radio > input[type=radio]:checked + label {
+    background-color: #39538a;
+    color: white;
+}
+/* 시간 입력 */
+.timeInput {
+    display: flex;
+    align-items: center;
+}
+.timeInput > span {
+    color: #39538a;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/* 문의글 입력 */
+.questionInput > textarea {
+    height: 100px;
+}
+
+/* 입력폼 개인정보 활용 동의 */
+.formCheck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+}
+.formCheck > section {
+    display: flex;
+    align-items: center;
+    width: 84%;
+    margin: 8px auto;
+}
+.formCheck > section > label {
+    margin-left: 20px;
+    width: auto;
+    flex: 1;
+    font-size: 14px;
+}
+.formCheck > section > div {
+    border: 1px solid #39538a;
+    padding: 4px;
+    font-size: 12px;
+}
+.formCheck > section > div > a {
+    color: #39538a;
+    font-weight: bolder;
+    padding: 4px;
+    font-size: 13px;
+}
+
+/* 개인정보 활용 동의 팝업 */
+.formCheck > section > div.overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(10, 10, 10, 0.9);
+    transition: 0.5s;
+}
+.overlay-content {
+    background-color: white;
+    width: 95%;
+    margin: 200px auto;
+}
+.overlay-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgb(73, 73, 73);
+}
+.overlay-title > h3 {
+    font-size: 15px;
+}
+.overlay-title > a {
+    font-size: 16px;
+}
+.overlay-text {
+    padding: 12px;
+}
+.overlay-text > div:first-child {
+    margin-bottom: 24px;
+}
+.overlay-text > div:last-child > p {
+    margin-bottom: 6px;
+}
+.overlay-text h3 {
+    margin-bottom: 6px;
+}
+/* 온라인접수 - 개인정보활용동의 */
+#applyAgr .overlay-text > div:last-child > p {
+    margin-bottom: 16px;
+}
+#applyAgr .overlay-text > div:last-child > p:last-child {
+    margin-bottom: 6px;
+}
+/* 상담신청 - 개인정보활용동의 */
+#counselAgr .overlay-text > div:nth-child(2) {
+    margin-bottom: 24px;
+}
+#counselAgr .overlay-text > div > p {
+    margin-bottom: 6px;
+}
+
+/* 입력폼 버튼 */ 
+.formBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+}
+.formBtn button {
+    border: 1px solid #39538a;
+    outline: none;
+    width: 160px;
+    height: 42px;
+    text-align: center;
+}
+.resetBtn {
+    background-color: white;
+    color: #39538a;
+    margin-right: 20px;
+}
+.submitBtn {
+    background-color: #39538a;
+    color: #fbb902;
+}
+
+
+
+
+
+/* PC 화면(~1024px) */
+@media screen and (min-width: 1024px) {
+    #conForm {
+        margin-top: 100px; 
+    }
+    /* 입력폼 탭 버튼 */
+    #conForm > #conFormTab > div {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+    }
+    #conForm > #conFormTab > div:first-child {
+        margin-right: 24px;
+    }
+    #conForm > #conFormTab > div:last-child {
+        margin-left: 24px;
+    }
+    #conForm > #conFormTab > div > img {
+        display: block;
+        margin-top: 20px;
+        margin-left: 30%;
+        width:42px;
+    }
+    #conForm > #conFormTab > #conCounsel > img {
+        display: block;
+        margin-top: 20px;
+        margin-left: 30%;
+        width: 50px;
+    }
+    #conForm > #conFormTab > div > p {
+        margin-top: 10x;
+    }
+    #conForm > #conFormTab > #conCounsel > p {
+        margin-top: 2px;
+    }
+    
+    /* 입력폼 내용 */
+    .formContent {
+        margin-top: 36px;
+        padding-top: 40px;
+    }
+    .formContent input[type=text], 
+    .formContent input[type=date],
+    .formContent select
+    {
+        height: 46px;
+    }
+    .formContent input::placeholder
+    {
+        font-size: 14px;
+    }
+    .formContent > div {
+        width: 82%;
+        margin-bottom: 34px;
+    }
+    .formContent > div > section {
+        display: flex;
+        flex-basis: auto;
+        align-items: center;
+    }
+    .formContent > div > section > div {
+        width: auto;
+        flex: 1;
+    }
+    .formContent > .flex {
+        display: flex;
+        flex-basis: auto;
+        align-items: center;
+    }
+    .formContent > .flex > section {
+        width: auto;
+        flex: 1;
+    }
+    .formContent > .flex > section:first-child {
+        margin-right: 25px;
+        margin-bottom: 0;
+    }
+    .formContent p {
+        margin-right: 10px;
+        width: 120px;
+        font-size: 20px;
+    }
+    .genderInput {
+        justify-content: flex-start;
+        padding: 0;
+    }
+    .genderInput > .radio {
+        width: 20%;
+    }
+    #conCounselForm .formContent > div > section > .timeInput {
+        width: 50%;
+        flex: unset;
+    }
+    
+    /* 입력폼 개인정보 활용 동의 */
+    .formCheck {
+        width: 60%;
+        margin: 30px auto;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+    }
+    .formCheck > section > label {
+        font-size: 18px;
+    }
+    .formCheck > section > div {
+        padding: 5px;
+        font-size: 22px;
+    }
+    .formCheck > section > div > a {
+        padding: 5px;
+        font-size: 16px;
+    }
+  
+
+    /* 입력폼 버튼 */
+    .formBtn {
+        margin-top: 44px;
+    }
+    .formBtn button {
+        width: 200px;
+        height: 46px;
+        font-size: 20px;
+    }
+    .resetBtn {
+        margin-right: 26px;
+    }
+}
