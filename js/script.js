@@ -288,17 +288,14 @@ $(document).ready(function(){
 //     });
 // $('.slider').not('.slick-initialized').slick();
     
-    var swiper = new Swiper(".swiper_RV", {
+    var swiper = new Swiper(".vertical_swiper", {
         slidesPerView: 1,
         direction: "vertical",
         autoplay: {
             delay: 1500,
             disableOnInteraction: false,
         },
-        // navigation: {
-        // nextEl: ".swiper-button-next",
-        // prevEl: ".swiper-button-prev",
-        // }, 
+         
         
     }); //탭 슬라이더
     

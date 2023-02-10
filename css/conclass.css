@@ -267,7 +267,7 @@ z-index:1;
 }
 
 
-.conClassReview .tab_slide 
+.conClassReview .vertical_slide 
 {
 opacity:1; 
 transition:opacity 0.3s;
@@ -282,16 +282,13 @@ text-shadow: 0 0 6px rgba(0, 0, 0, 16%);
 
 
 }
-.conClassReview .tab_slideCon
+.conClassReview .vertical_slideCon
 {
 
 position: relative;
-
-}
-.conClassReview .slick-list
-{
 height:145px;
 }
+
 .conClassReview .conClassRV_name
 {
 
@@ -309,20 +306,15 @@ left: 18%;
 background-color: #fff;
 border:1px solid #0D1A5A;
 /* 공간잘림 현상 */
-/* width:90%; */
+width:82%;
 height: 145px;
 
 }
-.conClassReview .conClassRV_txt p{
+.conClassReview .conClassRV_txt p
+{
 margin: 5%;
 
 }
-
-.conClassReview .slick-arrow
-{
-opacity: 0;
-}
-
 
 /* IT과정안내 아이템(포트폴리오) */
 .conClassPF

@@ -20,12 +20,12 @@
     <link rel="stylesheet" href="./css/landingForm.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.4.2/swiper-bundle.css">
+    <link rel="stylesheet" href="./css/swiper.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- js -->
     <script src="./js/jquery-3.6.1.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/slick.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <!--fontawesome-->
     <script src="https://kit.fontawesome.com/80f658f160.js" crossorigin="anonymous"></script>
@@ -430,9 +430,9 @@
                             <!-- IT과정안내 아이템(리뷰)  -->
                             <div class="conClassReview">
                                 <div class="conClassRV_title">수강생들의 리얼한 후기!</div>
-                                <div class="conClassRV_content slick1">
-                                    <div class="tab_slide tab_slide1">
-                                        <ul class="tab_slideCon">
+                                <div class="conClassRV_content vertical_swiper">
+                                    <div class="vertical_slide swiper-wrapper">
+                                        <ul class="vertical_slideCon">
                                             <li class="conClassRV_name">윤진실<br>(2기생)</li>
                                             <li class="conClassRV_txt">
                                                 <p> 교수님들도 정말 성심껏 학생들의 편의와 배움을 위해 노력해 주는 곳이었습니다. 이곳을 다닐 수 있어서 좋았습니다. 
@@ -441,7 +441,7 @@
                                                 </p>
                                             </li>
                                         </ul>
-                                        <ul  class="tab_slideCon">
+                                        <ul  class="vertical_slideCon">
                                             <li class="conClassRV_name">권지현<br>(2기생)</li>
                                             <li class="conClassRV_txt">
                                                 <p>코딩은 전혀 문외한이지만 좋은 교수님들을 만나 6개월을 알차게 보냈습니다. html, css, js 처음엔 이 용어들
@@ -449,7 +449,7 @@
                                                 </p>
                                             </li>
                                         </ul>
-                                        <ul  class="tab_slideCon">
+                                        <ul  class="vertical_slideCon">
                                             <li class="conClassRV_name">윤진실<br>(2기생)</li>
                                             <li class="conClassRV_txt">
                                                 <p>7개월 동안 열정적인 클래스 학우들과 따뜻한 지도력을 지니신 이선희 교수님을 만나 많이 성장했습니다. 교수님들의 
