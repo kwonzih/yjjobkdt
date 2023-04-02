@@ -112,6 +112,7 @@
     display: flex;
     justify-content: space-around;
     margin-top: 120px;
+    overflow-x: hidden;
 }
 #conClass .conContents .swiper-arrow
 {
@@ -401,7 +402,7 @@ box-sizing: border-box;
 width: 100vw;
 transition:0.5s all; 
 z-index:-1; 
-
+padding-left: 10px;
 }
 
 .conClassPF .swiper_PF
@@ -421,6 +422,16 @@ overflow: hidden;
 margin:0 24px;
 }
 
+@media screen and (max-width:1440px){
+
+.conClassPF .PF_slide img
+{
+width: 500px;
+height: 280px;
+overflow: hidden;
+margin:0 24px;
+}
+}
 
 
 
@@ -641,7 +652,9 @@ section#conClass .conComment
 .conClassPF
 {
     margin-top: 35px;
-    height: 230px;
+    height: auto;
+    overflow-x: hidden;
+    padding-bottom: 10%;
 }
 .conClassPF_title
 {
@@ -658,13 +671,24 @@ section#conClass .conComment
 }
 .conClassPF .PF_slide img
 {
+    width: 300px;
+    height: 169px;
+    overflow: hidden;
+    margin:0 24px;
+}
+}
+
+@media screen and (max-width:950px) {
+.conClassPF .PF_slide img
+{
     width: 238px;
     height: 134px;
-    margin-right: 10px;
+    overflow: hidden;
+    margin:0 24px;
 }
 }
 @media screen and (max-width:375px) {
-    section#conClass .conTxt
+section#conClass .conTxt
 {
     width: 90vw;
 }

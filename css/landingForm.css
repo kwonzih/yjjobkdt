@@ -19,7 +19,7 @@ a {
 #conForm {
     padding-top: 50px;
     margin-bottom: 200px; /* 바로 위 과정설명 섹션과의 여백 */
-
+    overflow-x: hidden;
 }
 
 /* 탭 버튼 */
