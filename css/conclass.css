@@ -1,10 +1,6 @@
 #conclassBG
 {
     width: 100%;
-    /* height: 3200px; */
-    position: relative;
-    /* border: 1px solid blue; */
-    
     background:#51A8FF;
 
 }
@@ -28,14 +24,21 @@
     background:#fff;
     color: black;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    gap: 5%;
     padding-top: 5px;
-    padding-left: 2%;
+    cursor: pointer;
 }
 #conClassTab .tab .tabIcon img
 {
      width: 30px;
+     filter: invert(31%) sepia(10%) saturate(2898%) hue-rotate(183deg) brightness(96%) contrast(90%);
+}
+#conClassTab > div.on > .tabIcon > img
+{
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(95deg) brightness(113%) contrast(98%); 
+
 }
 
 
@@ -109,7 +112,11 @@
     display: flex;
     justify-content: space-around;
     margin-top: 120px;
-    }
+}
+#conClass .conContents .swiper-arrow
+{
+    display: none;
+}
 
 #conClassItem  .conIcon
 {
@@ -127,6 +134,50 @@
     top: 50%;
     left: 22%;
     transform: translateY(-50%);
+    
+   
+}
+
+.conClassTab_sticky 
+{
+    
+    position: sticky;
+    right: 0;
+    top: 15%;
+    text-align:center;
+    background-color: #0D1A5A;
+    color:#fff;
+    font-size: 12px;
+    width: 150px;
+}
+.conClassTab_sticky > ul
+{
+    padding: 10px;
+
+}
+.conClassTab_sticky > ul > .tab
+{
+    display: flex;
+    justify-content: flex-start;
+    gap:5px;
+    cursor: pointer;
+
+}
+.conClassTab_sticky > ul > .tab.on > .tabIcon >img
+{
+    filter: invert(91%) sepia(58%) saturate(7431%) hue-rotate(356deg) brightness(103%) contrast(103%);
+}
+.conClassTab_sticky > ul > .tab.on > .tabTitle
+{
+    color: #ffff00;
+
+}
+.conClassTab_sticky > ul > .tab > .tabIcon >img
+{
+    width: 15px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(95deg) brightness(113%) contrast(98%);
+    
+
 }
 
 
@@ -159,8 +210,6 @@ section#conClass .conTitle
 section#conClass .conTxt
 {
     width: 70vw;
-    /* height: 300px; */
-    /* border: 1px solid blue; */
     margin: 0 auto;
     margin-bottom: 50px;
 }
@@ -244,34 +293,34 @@ section#conClass .conTxt .conTxtBox .num_txt
 /* IT과정안내 아이템(리뷰) */
 .conClassReview
 {
-/* border: 1px solid blue; */
 margin-top: 120px;
 }
+
+.conClassReview .paginationPosition
+{
+position:relative;
+width:80% ;
+margin: 80px auto;
+}
+.conClassReview .swiper-pagination
+{
+    position: absolute;
+    top: 0%;
+}
+
 .conClassReview .conClassRV_content
 {
 
-width: 70%;
-height: 200px;
-margin: 80px auto;
+width: 95%;
+height: 145px;
+margin:0 auto;
 overflow: hidden;
 box-sizing: border-box;
 transition:0.5s all; 
 z-index:-1; 
-/* display:none; */ 
-}
-.conClassReview .conClassRV_content.active
-{
-/* display:inherit; */ 
-opacity:1; 
-z-index:1;
+
 }
 
-
-.conClassReview .vertical_slide 
-{
-opacity:1; 
-transition:opacity 0.3s;
-}
 
 .conClassRV_title
 {
@@ -282,12 +331,17 @@ text-shadow: 0 0 6px rgba(0, 0, 0, 16%);
 
 
 }
+.conClassReview .swiper-wrapper
+{
+display: block;
+
+}
 .conClassReview .vertical_slideCon
 {
-
-position: relative;
-height:145px;
+display: flex;
 }
+
+
 
 .conClassReview .conClassRV_name
 {
@@ -298,23 +352,31 @@ width: 18%;
 height: 145px;
 padding-top: 50px;
 }
+
 .conClassReview .conClassRV_txt
 {
-position: absolute;
-top:0;
-left: 18%;
 background-color: #fff;
 border:1px solid #0D1A5A;
 /* 공간잘림 현상 */
 width:82%;
 height: 145px;
-
+-ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
 }
+
+.conClassReview .conClassRV_txt::-webkit-scrollbar 
+{
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
 .conClassReview .conClassRV_txt p
 {
 margin: 5%;
 
 }
+
+
 
 /* IT과정안내 아이템(포트폴리오) */
 .conClassPF
@@ -337,42 +399,32 @@ margin-top: 3.125rem;
 overflow: hidden;
 box-sizing: border-box;
 width: 100vw;
-/* height: 630px; */
 transition:0.5s all; 
 z-index:-1; 
-/* display:none; */
 
 }
-.conClassPF .conClassPF_content.active
-{
- /* display:inherit; */ 
- opacity:1; 
- z-index:1;
-}
 
-
-.conClassPF .tab_slides
+.conClassPF .swiper_PF
 {
-opacity:1; 
-/* transition:opacity 0.3s; */
-display: flex;
-justify-content: space-between;
+transition:opacity 0.3s;
+/* display: flex;
+justify-content: space-between; */
 
 }
 
 
-.conClassPF .tab_slide img
+.conClassPF .PF_slide img
 {
-opacity:1; 
 width: 640px;
 height: 360px;
 overflow: hidden;
 margin:0 24px;
 }
-.conClassPF .slick-arrow
-{
-opacity: 0;
-}
+
+
+
+
+
 @media screen and (max-width:1024px) {
     #conClassTab
 {
@@ -472,23 +524,44 @@ section#conClass .conComment
     margin-bottom :25px;
 }
 
-/* 세부내용 5가지 모바일 슬릭 슬라이드 */
+/* 세부내용 5가지 모바일  슬라이드 */
 .conContents
 {
     padding: 0;
 }
+ .arrowPosition
+{
+    position: relative;
+    height: 500px;
+    
+}
 .conContents .swiper-wrapper
 {
+    max-width: 100vw;
+    width: 100%;
+}
+
+#conClass .conContents .conContBox
+{
+    margin-bottom: 0px;
     position: relative;
     
 }
-
-.conContents .swiper-arrow::after
+#conClass .conContents .swiper-arrow
+{
+    display: block;
+    position:absolute;
+    z-index:10;
+    top:25%;
+    transform:translateY(-25%);
+}
+/* 동그라미 */
+#conClass .conContents .swiper-arrow::after
 {
     position:absolute;
     z-index:10;
-    top:50%;
-    transform:translateY(-50%);
+    top:20%;
+    transform:translateY(-35%);
     width: 48px;
     height: 48px;
     border-radius:100%;
@@ -497,6 +570,7 @@ section#conClass .conComment
     display: block; 
     color: transparent;
 }
+/* 화살표 */
 .conContents .swiper-arrow::before
 {
 
@@ -508,14 +582,17 @@ section#conClass .conComment
     align-items: center;
     justify-content: center;
     color: #fff;
+    margin-top:5px;
 }
-.swiper-button-prev {left: 50px; font-size: 0; color: transparent;}
+/* 이전화살표 */
+.swiper-button-prev::after  {left: -50%; transform:translateX(-15%); font-size: 0; color: transparent;}
 .swiper-button-prev::before 
 {
     content: '\e906';
     
 }
-.swiper-button-next {right: 50px ;font-size: 0; color: transparent;}
+/* 다음화살표 */
+.swiper-button-next::after {right: -50% ;font-size: 0; color: transparent;}
 .swiper-button-next::before 
 {
     content: '\e907';
@@ -543,6 +620,12 @@ section#conClass .conComment
     margin-top: 40px;
      
 }
+.conClassReview .paginationPosition
+{
+    margin: 40px auto;
+    width: 95%;
+}
+
 .conClassRV_title
 {
     font-size: 24px;
@@ -552,7 +635,7 @@ section#conClass .conComment
 .conClassReview .conClassRV_content
 {
     margin: 10px auto;
-
+    width: 87%;
 }
 /* 포트폴리오 */
 .conClassPF
@@ -566,16 +649,23 @@ section#conClass .conComment
     padding-left: 24px;
     display: flex;
     flex-direction: row;
+
 }
 .conClassPF .conClassPF_content 
 {
-    margin-top: 0px;
+    margin-top: 40px;
     
 }
-.conClassPF .tab_slide img
+.conClassPF .PF_slide img
 {
     width: 238px;
     height: 134px;
     margin-right: 10px;
+}
+}
+@media screen and (max-width:375px) {
+    section#conClass .conTxt
+{
+    width: 90vw;
 }
 }

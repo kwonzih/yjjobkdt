@@ -19,13 +19,13 @@
     <link rel="stylesheet" href="./css/conmap.css">
     <link rel="stylesheet" href="./css/landingForm.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/swiper.css">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@9.0.4/swiper-bundle.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
     <!-- js -->
     <script src="./js/jquery-3.6.1.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9.0.4/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <!--fontawesome-->
     <script src="https://kit.fontawesome.com/80f658f160.js" crossorigin="anonymous"></script>
@@ -33,7 +33,11 @@
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 </head>
 <body>
-    <div id="container">
+    <!-- <div class="preloader">
+        <div class="loader"></div>
+    </div> -->
+    <!-- style="display:none;" -->
+    <div id="container" >
         <header>
             <div id="headerCon" class="wrap">
                 <div id="headerLogo">
@@ -269,7 +273,7 @@
                     <!-- IT과정안내 탭  -->
                     <div id="conClassTab">
                         
-                            <div class="tab active" data-tab="tab-1" id="tab1">
+                            <div class="tab on" data-tab="tab-1" id="tab1">
                                 <div class="tabIcon"> <img src="./images/Tab_ITSW.svg" alt=""></div>
                                 <div class="tabTitle">IT/SW</div> 
                             </div>
@@ -291,6 +295,30 @@
                             </div>
                         
                     </div> <!-- IT과정안내 탭  -->
+                    <!-- conclassTab 따라다니는 탭 -->
+            <div class="conClassTab_sticky">
+                <ul>      
+                    <li class="tab on" >
+                        <div class="tabIcon"> <img src="./images/Tab_ITSW.svg" alt=""></div>
+                        <div class="tabTitle">IT/SW</div> 
+                    </li>
+                
+                    <li class="tab" >
+                        <div class="tabIcon"> <img src="./images/Tab_UIUX.svg" alt=""></div>
+                        <div class="tabTitle">UX/UI 디자인 개발</div> 
+                    </li>
+                
+                    <li class="tab"  >
+                        <div class="tabIcon"> <img src="./images/Tab_WebApp.svg" alt=""></div>
+                        <div class="tabTitle">스마트 웹&앱</div> 
+                    </li>
+
+                    <li class="tab"  >
+                        <div class="tabIcon"> <img src="./images/Tab_IoT.svg" alt=""></div>
+                        <div class="tabTitle">IoT Device 펌웨어 </div> 
+                    </li>
+                </ul>
+        </div> <!-- IT과정안내 탭  -->
     
                     <!-- tab 클릭 -> IT과정안내 아이템----------------------------------------- -->
                     <div id="conClassItem">
@@ -340,126 +368,131 @@
     
                             <!-- absolute 위치 조정
                                 IT과정안내 아이템(세부내용5개)  -->
-                              
-                            <div class="conContents tab_swiper">
-                                <div class="swiper-wrapper">
-                                    <!-- IT과정안내 세부내용 1 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="200">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_WebApp_hybrid.svg" alt="test">
-                                        </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                스마트웹&앱
+                            <div class="arrowPosition">   
+                                <div class="conContents tab_swiper">
+                                    <div class="swiper-wrapper">
+                                        <!-- IT과정안내 세부내용 1 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="200">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_WebApp_hybrid.svg" alt="test">
                                             </div>
-                                            <div class="conContTxt">
-                                            다양한 스마트 기기<br>플랫폼에 적용 가능한
-                                            <br>웹기반의 콘텐츠 서비스<br>개별 기술 습득
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    스마트웹&앱
+                                                </div>
+                                                <div class="conContTxt">
+                                                다양한 스마트 기기<br>플랫폼에 적용 가능한
+                                                <br>웹기반의 콘텐츠 서비스<br>개별 기술 습득
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- IT과정안내 세부내용 2 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="400">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_ITSW_BD.svg" alt="test">
-                                        </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                빅데이터분석&UI구현
+                                        <!-- IT과정안내 세부내용 2 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="400">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_ITSW_BD.svg" alt="test">
                                             </div>
-                                            <div class="conContTxt">
-                                                빅데이터 분석 및<br>정형/비정형 대용량 데이터를
-                                                <br>구축, 탐색, 분석하고<br>시각화 수행
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                                    <!-- IT과정안내 세부내용 3 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="600">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_ITSW_VRAR.svg" alt="test">
-                                        </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                VR/AR
-                                            </div>
-                                            <div class="conContTxt">
-                                                Metaverse 구현 기술인<br>실감형콘텐츠 제작 기술 중심               
-                                            <br>교육 및 현장실무<br>프로젝트 진행
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    빅데이터분석&UI구현
+                                                </div>
+                                                <div class="conContTxt">
+                                                    빅데이터 분석 및<br>정형/비정형 대용량 데이터를
+                                                    <br>구축, 탐색, 분석하고<br>시각화 수행
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <!-- IT과정안내 세부내용 4 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="800">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_ITSW_Security.svg" alt="test">
-                                        </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                정보보안
-                                            </div>
-                                            <div class="conContTxt">
-                                                안정적인 정보 자산<br>운영에 필요한
-                                            <br>정보보호 전략&정책수립 및<br>법령준수, 보호관리 수행
-                                            </div>
-                                        </div> 
-                                    </div>
                                     
-                                    <!-- IT과정안내 세부내용 5 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="1000">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_IoT_cloud-database.svg" alt="test">
+                                        <!-- IT과정안내 세부내용 3 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="600">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_ITSW_VRAR.svg" alt="test">
+                                            </div>
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    VR/AR
+                                                </div>
+                                                <div class="conContTxt">
+                                                    Metaverse 구현 기술인<br>실감형콘텐츠 제작 기술 중심               
+                                                <br>교육 및 현장실무<br>프로젝트 진행
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                IoT Device 펌웨어
+
+                                        <!-- IT과정안내 세부내용 4 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="800">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_ITSW_Security.svg" alt="test">
                                             </div>
-                                            <div class="conContTxt">
-                                                IoT기반 동화 솔루션<br>서비스 개발 및 유지보수
-                                            <br>개발 환경 이해 및<br>실무 개발 기술 습득
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    정보보안
+                                                </div>
+                                                <div class="conContTxt">
+                                                    안정적인 정보 자산<br>운영에 필요한
+                                                <br>정보보호 전략&정책수립 및<br>법령준수, 보호관리 수행
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
+                                        <!-- IT과정안내 세부내용 5 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="1000">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_IoT_cloud-database.svg" alt="test">
                                             </div>
-                                        </div> 
-                                    </div>
-                                </div>
-                                <div class="swiper-button-next swiper-arrow"></div>
-                                <div class="swiper-button-prev swiper-arrow"></div>
-                            </div> <!-- IT과정안내 아이템(세부내용5개) 끝  -->
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    IoT Device 펌웨어
+                                                </div>
+                                                <div class="conContTxt">
+                                                    IoT기반 동화 솔루션<br>서비스 개발 및 유지보수
+                                                <br>개발 환경 이해 및<br>실무 개발 기술 습득
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div> <!--swiper-wrapper-->
+                                    <div class="swiper-button-next swiper-arrow"></div>
+                                    <div class="swiper-button-prev swiper-arrow"></div>
+                                </div> <!--tab_swiper-->
+                            </div> <!-- arrowposition, 세부내용 끝  -->
                             
                             <!-- IT과정안내 아이템(리뷰)  -->
                             <div class="conClassReview">
                                 <div class="conClassRV_title">수강생들의 리얼한 후기!</div>
-                                <div class="conClassRV_content vertical_swiper">
-                                    <div class="vertical_slide swiper-wrapper">
-                                        <ul class="vertical_slideCon">
-                                            <li class="conClassRV_name">윤진실<br>(2기생)</li>
-                                            <li class="conClassRV_txt">
-                                                <p> 교수님들도 정말 성심껏 학생들의 편의와 배움을 위해 노력해 주는 곳이었습니다. 이곳을 다닐 수 있어서 좋았습니다. 
-                                                    다른 학원은 추이ㅓㅂ에는 관심도 없고 커리큘럼도 엉망이라 실망했었는데 이곳은 커리큘럼도 세세하게 나누어져 있었고
-                                                    분야마다 전문가 수준의 교수님들이 와서 가르쳐주었습니다.
-                                                </p>
-                                            </li>
-                                        </ul>
-                                        <ul  class="vertical_slideCon">
-                                            <li class="conClassRV_name">권지현<br>(2기생)</li>
-                                            <li class="conClassRV_txt">
-                                                <p>코딩은 전혀 문외한이지만 좋은 교수님들을 만나 6개월을 알차게 보냈습니다. html, css, js 처음엔 이 용어들
-                                                    하나도 제대로 말을 하지 못했는데 이 언어를 사용하여 하나의 페이지를 완성할 수 있는 사람이 되어 좋았습니다.
-                                                </p>
-                                            </li>
-                                        </ul>
-                                        <ul  class="vertical_slideCon">
-                                            <li class="conClassRV_name">윤진실<br>(2기생)</li>
-                                            <li class="conClassRV_txt">
-                                                <p>7개월 동안 열정적인 클래스 학우들과 따뜻한 지도력을 지니신 이선희 교수님을 만나 많이 성장했습니다. 교수님들의 
-                                                    실력과 애정도가 매우 뛰어나며 학생 한 사람, 한 사람 케어해주십니다. 본인 스스로만 열심히 하면 취업은 어렵지
-                                                    않을 겁니다.
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <div class="paginationPosition">
+                                    <div class="conClassRV_content vertical_swiper">
+                                        <div class="vertical_slide swiper-wrapper">
+                                            <ul class="vertical_slideCon swiper-slide">
+                                                <li class="conClassRV_name">윤진실<br>(2기생)</li>
+                                                <li class="conClassRV_txt">
+                                                    <p> 교수님들도 정말 성심껏 학생들의 편의와 배움을 위해 노력해 주는 곳이었습니다. 이곳을 다닐 수 있어서 좋았습니다. 
+                                                        다른 학원은 취업에는 관심도 없고 커리큘럼도 엉망이라 실망했었는데 이곳은 커리큘럼도 세세하게 나누어져 있었고
+                                                        분야마다 전문가 수준의 교수님들이 와서 가르쳐주었습니다.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <ul  class="vertical_slideCon swiper-slide">
+                                                <li class="conClassRV_name">권지현<br>(2기생)</li>
+                                                <li class="conClassRV_txt">
+                                                    <p>코딩은 전혀 문외한이지만 좋은 교수님들을 만나 6개월을 알차게 보냈습니다. html, css, js 처음엔 이 용어들
+                                                        하나도 제대로 말을 하지 못했는데 이 언어를 사용하여 하나의 페이지를 완성할 수 있는 사람이 되어 좋았습니다.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <ul  class="vertical_slideCon swiper-slide">
+                                                <li class="conClassRV_name">윤진실<br>(2기생)</li>
+                                                <li class="conClassRV_txt">
+                                                    <p>7개월 동안 열정적인 클래스 학우들과 따뜻한 지도력을 지니신 이선희 교수님을 만나 많이 성장했습니다. 교수님들의 
+                                                        실력과 애정도가 매우 뛰어나며 학생 한 사람, 한 사람 케어해주십니다. 본인 스스로만 열심히 하면 취업은 어렵지
+                                                        않을 겁니다.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div> <!--swiper-wrapper -->
+                                        
+                                        <div class="swiper-pagination"></div>
+                                    </div> <!--vertical_swiper-->
+                                </div>  <!--페이지네이션위치떔에 만듦-->
                             </div>  <!-- IT과정안내 아이템(리뷰) 끝 -->
                         
                         </div> <!-- IT과정안내 아이템 1 끝-->
@@ -506,114 +539,125 @@
                             </div> <!--conClassItem_top 끝-->
     
                             <!-- IT과정안내 아이템(세부내용5개)  -->
-                            <div class="conContents  tab_swiper2">
-                                <!-- IT과정안내 세부내용 1 -->
-                                <div class="swiper-wrapper">
+                            <div class="arrowPosition">
+                                <div class="conContents  tab_swiper">
+                                    <!-- IT과정안내 세부내용 1 -->
+                                    <div class="swiper-wrapper">
 
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="200">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_UIUX_UIUX.svg" alt="">
-                                        </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                UX설계/UI디자인
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="200">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_UIUX_UIUX.svg" alt="">
                                             </div>
-                                            <div class="conContTxt">
-                                                UX 설계 및<br>그래픽 소프트웨어를<br>활용한 UI 디자인
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <!-- IT과정안내 세부내용 2 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="400">
-                                        <div class="conIcon">
-                                        <img src="./images/conClass_UIUX_publishing.svg" alt="">
-                                        </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                웹퍼블리싱/ 웹개발
-                                            </div>
-                                            <div class="conContTxt">
-                                                HTML5, CSS, Javascript,<br>jQuery를 사용하여<br>반응형 웹 사이트 개발 및 구현
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    UX설계/UI디자인
+                                                </div>
+                                                <div class="conContTxt">
+                                                    스토리보드 구상<br>프로토타입 제작 등<br>UX 설계 및 그래픽<br>소프트웨어 활용 UI디자인                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                
-                                    <!-- IT과정안내 세부내용 3 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="600">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_UIUX_responsive.svg" alt="">
+            
+                                        <!-- IT과정안내 세부내용 2 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="400">
+                                            <div class="conIcon">
+                                            <img src="./images/conClass_UIUX_publishing.svg" alt="">
+                                            </div>
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    웹퍼블리싱
+                                                </div>
+                                                <div class="conContTxt">
+                                                    HTML, CSS, Javascript,<br>jQuery를 사용하여<br>웹표준과 웹접근성을 <br>준수한 웹퍼블리싱
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                프론트엔드 개발
-                                            </div>
-                                            <div class="conContTxt">
-                                                Javascript, PHP,<br>Mysql, 활용한 서버연동<br>하이브리드앱 개발
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <!-- IT과정안내 세부내용 4 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="800">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_UIUX_3d-graphics.svg" alt="">
-                                        </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                하이브리드앱 개발
-                                            </div>
-                                            <div class="conContTxt">
-                                                Open API를 활용한<br>웹&앱 콘텐츠 개발<br>실무프로젝트 수행
-                                            </div>
-                                        </div> 
-                                    </div>
                                     
-                                    <!-- IT과정안내 세부내용 5 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="1000">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_UiUX_idea.svg" alt="">
+                                        <!-- IT과정안내 세부내용 3 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="600">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_UIUX_responsive.svg" alt="">
+                                            </div>
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    반응형 웹개발
+                                                </div>
+                                                <div class="conContTxt">
+                                                    플렉서블박스와<br>미디어쿼리<br>부트스트랩 프레임워크<br>활용 반응형 웹 사이트<br>개발 및 구현
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                OpenAPI활용
+            
+                                        <!-- IT과정안내 세부내용 4 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="800">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_UIUX_3d-graphics.svg" alt="">
                                             </div>
-                                            <div class="conContTxt">
-                                                Open API를 활용한<br>웹&앱 콘텐츠 개발<br>실무프로젝트 수행
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    3D GRAPHICS
+                                                </div>
+                                                <div class="conContTxt">
+                                                    3D Modeling<br>UV & Texture Map 제작 <br>Lighing & Rendering <br>Keyframe Animation
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
+                                        <!-- IT과정안내 세부내용 5 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="1000">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_UIUX_idea.svg" alt="">
                                             </div>
-                                        </div> 
-                                    </div>  
-                                </div>
-                                <div class="swiper-button-next swiper-arrow"></div>
-                                <div class="swiper-button-prev swiper-arrow"></div>
-                            </div> <!-- IT과정안내 아이템(세부내용5개) 끝  -->
-                             <!-- IT과정안내 아이템(리뷰)  -->
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    실무 프로젝트
+                                                </div>
+                                                <div class="conContTxt">
+                                                    메타버스 비대면 플랫폼 개발<br>웹표준 인터렉티브 반응형<br>웹개발,<br>반려동물 시장 겨냥<br>펫서비스 UI/UX개발
+                                                </div>
+                                            </div> 
+                                        </div>  
+                                    </div> <!--swiper-wrapper-->
+                                    <div class="swiper-button-next swiper-arrow"></div>
+                                    <div class="swiper-button-prev swiper-arrow"></div>
+                                </div> <!-- tab_swiper IT과정안내 아이템(세부내용5개) 끝  -->
+                            </div> <!--arrowposition-->
+                            <!-- IT과정안내 아이템(리뷰)  -->
                             <div class="conClassReview">
                                 <div class="conClassRV_title">수강생들의 리얼한 후기!</div>
-                                <div class="conClassRV_content slick1" id="Rv1">
-                                    <div class="tab_slide tab_slide1">
-                                        <ul class="tab_slideCon">
-                                            <li class="conClassRV_name">윤진실<br>(2기생)</li>
-                                            <li class="conClassRV_txt">대학 졸업 후 혼자 취업 준비로 막막했는데 좋은 기회로 영진직업전문학교를 소개받아 취업하게 됨 어쩌고...
-                                                좋은 커리큘럼과 강의진으로 걱정이 안 되고 어쩌고저쩌고 멋진 수강 어쩌고...
-                                                덕분에 취업했습니다 감사합니다 구구절절.. 수근수근.. 이수근..
-                                            </li>
-                                        </ul>
-                                        <ul  class="tab_slideCon">
-                                            <li class="conClassRV_name">권지현<br>(2기생)</li>
-                                            <li class="conClassRV_txt">
-                                                코딩은 전혀 문외한이지만 좋은 교수님과 맛있는 커리큘럼으로 어쩌구
-                                            </li>
-                                        </ul>
-                                        <ul  class="tab_slideCon">
-                                            <li class="conClassRV_name">윤진실<br>(2기생)</li>
-                                            <li class="conClassRV_txt">대학 졸업 후 혼자 취업 준비로 막막했는데 좋은 기회로 영진직업전문학교를 소개받아 취업하게 됨 어쩌고...
-                                                좋은 커리큘럼과 강의진으로 걱정이 안 되고 어쩌고저쩌고 멋진 수강 어쩌고...
-                                                덕분에 취업했습니다 감사합니다 구구절절.. 수근수근.. 이수근..
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <div class="paginationPosition">
+                                    <div class="conClassRV_content vertical_swiper">
+                                        <div class="vertical_slide swiper-wrapper">
+                                            <ul class="vertical_slideCon swiper-slide">
+                                                <li class="conClassRV_name">윤진실<br>(2기생)</li>
+                                                <li class="conClassRV_txt">
+                                                    <p> 교수님들도 정말 성심껏 학생들의 편의와 배움을 위해 노력해 주는 곳이었습니다. 이곳을 다닐 수 있어서 좋았습니다. 
+                                                        다른 학원은 취업에는 관심도 없고 커리큘럼도 엉망이라 실망했었는데 이곳은 커리큘럼도 세세하게 나누어져 있었고
+                                                        분야마다 전문가 수준의 교수님들이 와서 가르쳐주었습니다.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <ul  class="vertical_slideCon swiper-slide">
+                                                <li class="conClassRV_name">권지현<br>(2기생)</li>
+                                                <li class="conClassRV_txt">
+                                                    <p>코딩은 전혀 문외한이지만 좋은 교수님들을 만나 6개월을 알차게 보냈습니다. html, css, js 처음엔 이 용어들
+                                                        하나도 제대로 말을 하지 못했는데 이 언어를 사용하여 하나의 페이지를 완성할 수 있는 사람이 되어 좋았습니다.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <ul  class="vertical_slideCon swiper-slide">
+                                                <li class="conClassRV_name">윤진실<br>(2기생)</li>
+                                                <li class="conClassRV_txt">
+                                                    <p>7개월 동안 열정적인 클래스 학우들과 따뜻한 지도력을 지니신 이선희 교수님을 만나 많이 성장했습니다. 교수님들의 
+                                                        실력과 애정도가 매우 뛰어나며 학생 한 사람, 한 사람 케어해주십니다. 본인 스스로만 열심히 하면 취업은 어렵지
+                                                        않을 겁니다.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div> <!--swiper-wrapper -->
+                                        
+                                        <div class="swiper-pagination"></div>
+                                    </div> <!--vertical_swiper-->
+                                </div> <!--페이지네이션위치떔에 만듦-->
                             </div>  <!-- IT과정안내 아이템(리뷰) 끝 -->
                             
                         </div> <!-- IT과정안내 아이템 2 끝-->
@@ -660,115 +704,127 @@
                             </div> <!--conClassItem_top 끝-->
     
                             <!-- IT과정안내 아이템(세부내용5개)  -->
-                            <div class="conContents tab_swiper3">
-                                <!-- IT과정안내 세부내용 1 -->
-                                <div class="swiper-wrapper">
+                            <div class="arrowPosition">
+                                <div class="conContents tab_swiper">
+                                    <!-- IT과정안내 세부내용 1 -->
+                                    <div class="swiper-wrapper">
 
-                                    <div class="conContBox swiper-slide  sa sa-up" data-sa-delay="200">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_WebApp_UXUI.svg" alt="">
-                                        </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                UX설계/UI디자인
+                                        <div class="conContBox swiper-slide  sa sa-up" data-sa-delay="200">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_WebApp_UXUI.svg" alt="">
                                             </div>
-                                            <div class="conContTxt">
-                                                UX 설계 및<br>그래픽 소프트웨어를<br>활용한 UI 디자인
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <!-- IT과정안내 세부내용 2 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="400">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_WebApp_publishing.svg" alt="">
-                                        </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                웹퍼블리싱/ 웹개발
-                                            </div>
-                                            <div class="conContTxt">
-                                                HTML5, CSS, Javascript,<br>jQuery를 사용하여<br>반응형 웹 사이트 개발 및 구현
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    UX설계/UI디자인
+                                                </div>
+                                                <div class="conContTxt">
+                                                    UX 설계 및<br>그래픽 소프트웨어를<br>활용한 UI 디자인
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                
-                                    <!-- IT과정안내 세부내용 3 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="600">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_WebApp_front.svg" alt="">
+            
+                                        <!-- IT과정안내 세부내용 2 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="400">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_WebApp_publishing.svg" alt="">
+                                            </div>
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    웹퍼블리싱/ 웹개발
+                                                </div>
+                                                <div class="conContTxt">
+                                                    HTML5, CSS, Javascript,<br>jQuery를 사용하여<br>반응형 웹 사이트 개발 및 구현
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                프론트엔드 개발
-                                            </div>
-                                            <div class="conContTxt">
-                                                Javascript, PHP,<br>Mysql, 활용한 서버연동<br>하이브리드앱 개발
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <!-- IT과정안내 세부내용 4 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="800">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_WebApp_hybrid.svg" alt="">
-                                        </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                하이브리드앱 개발
-                                            </div>
-                                            <div class="conContTxt">
-                                                Open API를 활용한<br>웹&앱 콘텐츠 개발<br>실무프로젝트 수행
-                                            </div>
-                                        </div> 
-                                    </div>
                                     
-                                    <!-- IT과정안내 세부내용 5 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="1000">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_WebApp_OpenAPI.svg" alt="">
+                                        <!-- IT과정안내 세부내용 3 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="600">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_WebApp_front.svg" alt="">
+                                            </div>
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    프론트엔드 개발
+                                                </div>
+                                                <div class="conContTxt">
+                                                    Javascript, PHP,<br>Mysql, 활용한 서버연동<br>하이브리드앱 개발
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                OpenAPI활용
+            
+                                        <!-- IT과정안내 세부내용 4 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="800">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_WebApp_hybrid.svg" alt="">
                                             </div>
-                                            <div class="conContTxt">
-                                                Open API를 활용한<br>웹&앱 콘텐츠 개발<br>실무프로젝트 수행
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    하이브리드앱 개발
+                                                </div>
+                                                <div class="conContTxt">
+                                                    Open API를 활용한<br>웹&앱 콘텐츠 개발<br>실무프로젝트 수행
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
+                                        <!-- IT과정안내 세부내용 5 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="1000">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_WebApp_OpenAPI.svg" alt="">
                                             </div>
-                                        </div> 
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    OpenAPI활용
+                                                </div>
+                                                <div class="conContTxt">
+                                                    Open API를 활용한<br>웹&앱 콘텐츠 개발<br>실무프로젝트 수행
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
                                     </div>
-                                    
-                                </div>
-                                <div class="swiper-button-next swiper-arrow"></div>
-                                <div class="swiper-button-prev swiper-arrow"></div>
-                            </div> <!-- IT과정안내 아이템(세부내용5개) 끝  -->
+                                    <div class="swiper-button-next swiper-arrow"></div>
+                                    <div class="swiper-button-prev swiper-arrow"></div>
+                                </div> <!--tab_swiper IT과정안내 아이템(세부내용5개) 끝  -->
+                            </div>   <!--arrow위치-->
                             <!-- IT과정안내 아이템(리뷰)  -->
                             <div class="conClassReview">
                                 <div class="conClassRV_title">수강생들의 리얼한 후기!</div>
-                                <div class="conClassRV_content slick1" id="Rv1">
-                                    <div class="tab_slide tab_slide1">
-                                        <ul class="tab_slideCon">
-                                            <li class="conClassRV_name">윤진실<br>(2기생)</li>
-                                            <li class="conClassRV_txt">대학 졸업 후 혼자 취업 준비로 막막했는데 좋은 기회로 영진직업전문학교를 소개받아 취업하게 됨 어쩌고...
-                                                좋은 커리큘럼과 강의진으로 걱정이 안 되고 어쩌고저쩌고 멋진 수강 어쩌고...
-                                                덕분에 취업했습니다 감사합니다 구구절절.. 수근수근.. 이수근..
-                                            </li>
-                                        </ul>
-                                        <ul  class="tab_slideCon">
-                                            <li class="conClassRV_name">권지현<br>(2기생)</li>
-                                            <li class="conClassRV_txt">
-                                                코딩은 전혀 문외한이지만 좋은 교수님과 맛있는 커리큘럼으로 어쩌구
-                                            </li>
-                                        </ul>
-                                        <ul  class="tab_slideCon">
-                                            <li class="conClassRV_name">윤진실<br>(2기생)</li>
-                                            <li class="conClassRV_txt">대학 졸업 후 혼자 취업 준비로 막막했는데 좋은 기회로 영진직업전문학교를 소개받아 취업하게 됨 어쩌고...
-                                                좋은 커리큘럼과 강의진으로 걱정이 안 되고 어쩌고저쩌고 멋진 수강 어쩌고...
-                                                덕분에 취업했습니다 감사합니다 구구절절.. 수근수근.. 이수근..
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <div class="paginationPosition">
+                                    <div class="conClassRV_content vertical_swiper">
+                                        <div class="vertical_slide swiper-wrapper">
+                                            <ul class="vertical_slideCon swiper-slide">
+                                                <li class="conClassRV_name">윤진실<br>(2기생)</li>
+                                                <li class="conClassRV_txt">
+                                                    <p> 교수님들도 정말 성심껏 학생들의 편의와 배움을 위해 노력해 주는 곳이었습니다. 이곳을 다닐 수 있어서 좋았습니다. 
+                                                        다른 학원은 취업에는 관심도 없고 커리큘럼도 엉망이라 실망했었는데 이곳은 커리큘럼도 세세하게 나누어져 있었고
+                                                        분야마다 전문가 수준의 교수님들이 와서 가르쳐주었습니다.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <ul  class="vertical_slideCon swiper-slide">
+                                                <li class="conClassRV_name">권지현<br>(2기생)</li>
+                                                <li class="conClassRV_txt">
+                                                    <p>코딩은 전혀 문외한이지만 좋은 교수님들을 만나 6개월을 알차게 보냈습니다. html, css, js 처음엔 이 용어들
+                                                        하나도 제대로 말을 하지 못했는데 이 언어를 사용하여 하나의 페이지를 완성할 수 있는 사람이 되어 좋았습니다.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <ul  class="vertical_slideCon swiper-slide">
+                                                <li class="conClassRV_name">윤진실<br>(2기생)</li>
+                                                <li class="conClassRV_txt">
+                                                    <p>7개월 동안 열정적인 클래스 학우들과 따뜻한 지도력을 지니신 이선희 교수님을 만나 많이 성장했습니다. 교수님들의 
+                                                        실력과 애정도가 매우 뛰어나며 학생 한 사람, 한 사람 케어해주십니다. 본인 스스로만 열심히 하면 취업은 어렵지
+                                                        않을 겁니다.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div> <!--swiper-wrapper -->
+                                        
+                                        <div class="swiper-pagination"></div>
+                                    </div> <!--vertical_swiper-->
+                                </div> <!--페이지네이션위치떔에 만듦-->
                             </div>  <!-- IT과정안내 아이템(리뷰) 끝 -->
                              
                         </div> <!-- IT과정안내 아이템 3 끝-->
@@ -815,118 +871,127 @@
                             </div> <!--conClassItem_top 끝-->
     
                             <!-- IT과정안내 아이템(세부내용5개)  -->
-                            <div class="conContents tab_swiper4">
-                                <div class="swiper-wrapper">
-
-                                    <!-- IT과정안내 세부내용 1 -->
-                                    <div class="conContBox swiper-slide  sa sa-up" data-sa-delay="200"">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_IoT_micro.svg" alt="">
-                                        </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                마이크로 컨트롤러
+                            <div class="arrowPosition">
+                                <div class="conContents tab_swiper">
+                                    <div class="swiper-wrapper">
+                                        <!-- IT과정안내 세부내용 1 -->
+                                        <div class="conContBox swiper-slide  sa sa-up" data-sa-delay="200"">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_IoT_micro.svg" alt="">
                                             </div>
-                                            <div class="conContTxt">
-                                                UX 설계 및<br>그래픽 소프트웨어를<br>활용한 UI 디자인
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <!-- IT과정안내 세부내용 2 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="400">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_IoT_coding-language.svg" alt="">
-                                        </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                웹퍼블리싱/ 웹개발
-                                            </div>
-                                            <div class="conContTxt">
-                                                HTML5, CSS, Javascript,<br>jQuery를 사용하여<br>반응형 웹 사이트 개발 및 구현
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    마이크로 컨트롤러
+                                                </div>
+                                                <div class="conContTxt">
+                                                    ARM Contex(STM32)<br>라즈베리파이<br>AVR 임베디드 개발도구
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                
-                                    <!-- IT과정안내 세부내용 3 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="600">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_Iot_computer.svg" alt="">
+            
+                                        <!-- IT과정안내 세부내용 2 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="400">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_IoT_coding-language.svg" alt="">
+                                            </div>
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    프로그래밍 언어
+                                                </div>
+                                                <div class="conContTxt">
+                                                    C/C++, C# 프로그래밍<br>파이썬(OpenCV)
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                프론트엔드 개발
-                                            </div>
-                                            <div class="conContTxt">
-                                                Javascript, PHP,<br>Mysql, 활용한 서버연동<br>하이브리드앱 개발
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <!-- IT과정안내 세부내용 4 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="800">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_IoT_cloud-database.svg" alt="">
-                                        </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                하이브리드앱 개발
-                                            </div>
-                                            <div class="conContTxt">
-                                                Open API를 활용한<br>웹&앱 콘텐츠 개발<br>실무프로젝트 수행
-                                            </div>
-                                        </div> 
-                                    </div>
                                     
-                                    <!-- IT과정안내 세부내용 5 -->
-                                    <div class="conContBox swiper-slide sa sa-up" data-sa-delay="1000">
-                                        <div class="conIcon">
-                                            <img src="./images/conClass_Iot_project.svg" alt="">
+                                        <!-- IT과정안내 세부내용 3 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="600">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_Iot_computer.svg" alt="">
+                                            </div>
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    사물인터넷(IoT)통신
+                                                </div>
+                                                <div class="conContTxt">
+                                                    TCP/IP(WiFi),<br>BlueTooth, 소켓통신
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="conContBottom">
-                                            <div class="conContTitle">
-                                                OpenAPI활용
+            
+                                        <!-- IT과정안내 세부내용 4 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="800">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_IoT_cloud-database.svg" alt="">
                                             </div>
-                                            <div class="conContTxt">
-                                                Open API를 활용한<br>웹&앱 콘텐츠 개발<br>실무프로젝트 수행
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    데이터베이스
+                                                </div>
+                                                <div class="conContTxt"> 
+                                                    MySQL, MS-SQL
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
+                                        <!-- IT과정안내 세부내용 5 -->
+                                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="1000">
+                                            <div class="conIcon">
+                                                <img src="./images/conClass_Iot_project.svg" alt="">
                                             </div>
-                                        </div> 
-                                    </div>
-                                    
-                                </div>
-                                <div class="swiper-button-next swiper-arrow"></div>
-                                <div class="swiper-button-prev swiper-arrow"></div>
-                            </div> <!-- IT과정안내 아이템(세부내용5개) 끝  -->
-                            
+                                            <div class="conContBottom">
+                                                <div class="conContTitle">
+                                                    실무 프로젝트
+                                                </div>
+                                                <div class="conContTxt">
+                                                    오픈플랫폼 활용 스마트 홈<br>시스템 펌웨어 카메라를 이용한<br>프로그램 개발과 수직정원 제어<br>시스템 펌웨어 개발
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
+                                    </div><!--swiper-wrapper-->
+                                    <div class="swiper-button-next swiper-arrow"></div>
+                                    <div class="swiper-button-prev swiper-arrow"></div>
+                                </div> <!-- tab_swiper IT과정안내 아이템(세부내용5개) 끝  -->
+                            </div> <!--arrow-->
                             <!-- IT과정안내 아이템(리뷰)  -->
                             <div class="conClassReview">
                                 <div class="conClassRV_title">수강생들의 리얼한 후기!</div>
-                                <div class="conClassRV_content slick1" id="Rv1">
-                                    <div class="tab_slide tab_slide1">
-                                        <ul class="tab_slideCon">
-                                            <li class="conClassRV_name">윤진실<br>(2기생)</li>
-                                            <li class="conClassRV_txt">대학 졸업 후 혼자 취업 준비로 막막했는데 좋은 기회로 영진직업전문학교를 소개받아 취업하게 됨 어쩌고...
-                                                좋은 커리큘럼과 강의진으로 걱정이 안 되고 어쩌고저쩌고 멋진 수강 어쩌고...
-                                                덕분에 취업했습니다 감사합니다 구구절절.. 수근수근.. 이수근..
-                                            </li>
-                                        </ul>
-                                        <ul  class="tab_slideCon">
-                                            <li class="conClassRV_name">권지현<br>(2기생)</li>
-                                            <li class="conClassRV_txt">
-                                                코딩은 전혀 문외한이지만 좋은 교수님과 맛있는 커리큘럼으로 어쩌구
-                                            </li>
-                                        </ul>
-                                        <ul  class="tab_slideCon">
-                                            <li class="conClassRV_name">윤진실<br>(2기생)</li>
-                                            <li class="conClassRV_txt">대학 졸업 후 혼자 취업 준비로 막막했는데 좋은 기회로 영진직업전문학교를 소개받아 취업하게 됨 어쩌고...
-                                                좋은 커리큘럼과 강의진으로 걱정이 안 되고 어쩌고저쩌고 멋진 수강 어쩌고...
-                                                덕분에 취업했습니다 감사합니다 구구절절.. 수근수근.. 이수근..
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <div class="paginationPosition">
+                                    <div class="conClassRV_content vertical_swiper">
+                                        <div class="vertical_slide swiper-wrapper">
+                                            <ul class="vertical_slideCon swiper-slide">
+                                                <li class="conClassRV_name">윤진실<br>(2기생)</li>
+                                                <li class="conClassRV_txt">
+                                                    <p> 교수님들도 정말 성심껏 학생들의 편의와 배움을 위해 노력해 주는 곳이었습니다. 이곳을 다닐 수 있어서 좋았습니다. 
+                                                        다른 학원은 취업에는 관심도 없고 커리큘럼도 엉망이라 실망했었는데 이곳은 커리큘럼도 세세하게 나누어져 있었고
+                                                        분야마다 전문가 수준의 교수님들이 와서 가르쳐주었습니다.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <ul  class="vertical_slideCon swiper-slide">
+                                                <li class="conClassRV_name">권지현<br>(2기생)</li>
+                                                <li class="conClassRV_txt">
+                                                    <p>코딩은 전혀 문외한이지만 좋은 교수님들을 만나 6개월을 알차게 보냈습니다. html, css, js 처음엔 이 용어들
+                                                        하나도 제대로 말을 하지 못했는데 이 언어를 사용하여 하나의 페이지를 완성할 수 있는 사람이 되어 좋았습니다.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <ul  class="vertical_slideCon swiper-slide">
+                                                <li class="conClassRV_name">윤진실<br>(2기생)</li>
+                                                <li class="conClassRV_txt">
+                                                    <p>7개월 동안 열정적인 클래스 학우들과 따뜻한 지도력을 지니신 이선희 교수님을 만나 많이 성장했습니다. 교수님들의 
+                                                        실력과 애정도가 매우 뛰어나며 학생 한 사람, 한 사람 케어해주십니다. 본인 스스로만 열심히 하면 취업은 어렵지
+                                                        않을 겁니다.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div> <!--swiper-wrapper -->
+                                        
+                                        <div class="swiper-pagination"></div>
+                                    </div> <!--vertical_swiper-->
+                                </div> <!--페이지네이션위치떔에 만듦-->
                             </div>  <!-- IT과정안내 아이템(리뷰) 끝 -->
-                           
                         
                         
                         </div> <!-- IT과정안내 아이템 4 끝-->
@@ -937,65 +1002,65 @@
                             포트폴리오
                         </div>
                         <!-- 슬릭 슬라이더 -->
-                        <div class="conClassPF_content slick2">
+                        <div class="conClassPF_content swiper_PF">
                             
-                            <div class="tab_slide tab_slide2">
-                                <div>
+                            <div class="PF_slide swiper-wrapper">
+                                <div class="swiper-slide">
                                     <a id="img1" href="#"><img src="./images/conClassPF_WebApp_1.jpg" alt="WebApp_1"></a>
                                 </div>
                     
-                                <div>
+                                <div class="swiper-slide">
                                     <a id="img2" href="#"><img src="./images/conClassPF_WebApp_2.jpg" alt="WebApp_2"></a>
                                 </div>
                     
-                                <div>
+                                <div class="swiper-slide">
                                     <a id="img3" href="#"><img style="background-color:#fff" src="./images/conClassPF_WebApp_3.png" alt="WebApp_3"></a>
                                 </div>
     
-                                <div>
+                                <div class="swiper-slide">
                                     <a id="img4" href="#"><img src="./images/conClassPF_WebApp_4$.jpg" alt="4$"></a>
                                 </div>
     
-                                <div>
+                                <div class="swiper-slide">
                                     <a id="img5" href="#"><img src="./images/conClassPF_WebApp_Aladin.png" alt="알라딘"></a>
                                 </div>
-                                <div>
+                                <div class="swiper-slide">
                                     <a id="img2" href="#"><img src="./images/conClassPF_WebApp_KDJ.jpg" alt="KDG"></a>
                                 </div>
                     
-                                <div>
+                                <div class="swiper-slide">
                                     <a id="img3" href="#"><img src="./images/conClassPF_VR_1.png" alt="VR_1"></a>
                                 </div>
     
-                                <div>
+                                <div class="swiper-slide">
                                     <a id="img4" href="#"><img src="./images/conClassPF_VR_2.jpg" alt="VR_2"></a>
                                 </div>
     
-                                <div>
+                                <div class="swiper-slide">
                                     <a id="img5" href="#"><img src="./images/conClassPF_VR_3.png" alt="VR_3"></a>
                                 </div>
                     
-                                <div>
+                                <div class="swiper-slide">
                                     <a id="img1" href="#"><img src="images\conClassPF_Iot_1.jpg" alt="Iot_1"></a>
-                                </div>
+                                </div class="swiper-slide">
                     
-                                <div>
+                                <div class="swiper-slide">
                                     <a id="img2" href="#"><img src="images\conClassPF_Iot_2.jpg" alt="Iot_2"></a>
                                 </div>
 
-                                <div>
+                                <div class="swiper-slide">
                                     <a id="img2" href="#"><img src="images\conClassPF_Iot_3.jpg" alt="Iot_3"></a>
                                 </div>
                     
-                                <div>
+                                <div class="swiper-slide">
                                     <a id="img3" href="#"><img src="./images/conClassPF_UIUX_1.png" alt="UIUX_1"></a>
                                 </div>
     
-                                <div>
+                                <div class="swiper-slide">
                                     <a id="img4" href="#"><img src="./images/conClassPF_UIUX_2.jpg" alt="UIUX_2"></a>
                                 </div>
     
-                                <div>
+                                <div class="swiper-slide">
                                     <a id="img5" href="#"><img src="./images/conClassPF_UIUX_3.png" alt="UIUX_3"></a>
                                 </div>
                                 
@@ -1013,80 +1078,82 @@
                         <div> 접수 절차는 이렇게 합니다! </div>
                     <div class="conTitle"> 과정접수안내 </div>
                 </div>
-                
-                <div class="conContents  process_swiper removeClass">
-                    <div class="swiper-wrapper">
-                
-                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="200">
-                            <div class="conIcon"> 
-                                <img src="./images/conProcess_1_credit-card (1).png" alt="">
-                            </div>
-            
-                            <div class="conContBottom">
-                                <div class="conContTitle"> 내일배움카드 발급 </div>
-                                <div class="conContTxt"> 
-                                    고용노동센터를 방문하거나<br>
-                                    HRD-Net을 통해 신청  
-                                </div>
-                                <p>*HRD-Net<br>(https://www.hrd.go.kr)</p>
-                            </div>
-                        </div>
-            
-                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="400">
-                            <div class="conIcon"> 
-                                <img src="./images/conProcess_2_candidate.svg" alt="">
 
-                            </div>
-            
-                            <div class="conContBottom">
-                                <div class="conContTitle"> 본교 온라인접수 </div>
-                                <div class="conContTxt"> 
-                                    이 페이지 아래에 위치한 <br>
-                                    과정 온라인 접수 신청
+                <div class="arrowPosition">
+                    <div class="conContents  process_swiper removeClass">
+                        <div class="swiper-wrapper">
+                    
+                            <div class="conContBox swiper-slide sa sa-up" data-sa-delay="200">
+                                <div class="conIcon"> 
+                                    <img src="./images/conProcess_1_credit-card.svg" alt="">
                                 </div>
-                                <p>*입학 상담을 원할 경우 <br>
-                                    영진직업 전문학교 입학상담 신청 <br>
-                                </p>
-                                
-                            </div>
-                        </div>
-            
-                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="600">
-                            <div class="conIcon"> 
-                                <img src="./images/conProcess_3_discussion.svg" alt="">
-                                
-                            </div>
-            
-                            <div class="conContBottom">
-                                <div class="conContTitle"> 담당교수 상담 </div>
-                                <div class="conContTxt"> 
-                                    온라인접수 후 <br>
-                                    연락가능시간 안에 <br>
-                                    해당 과정 담당 교수와 <br>
-                                    면접진행
+                
+                                <div class="conContBottom">
+                                    <div class="conContTitle"> 내일배움카드 발급 </div>
+                                    <div class="conContTxt"> 
+                                        고용노동센터를 방문하거나<br>
+                                        HRD-Net을 통해 신청  
+                                    </div>
+                                    <p>*HRD-Net<br><a href="https://www.hrd.go.kr">(https://www.hrd.go.kr)</a></p>
                                 </div>
                             </div>
-                        </div>
-            
-                        <div class="conContBox swiper-slide sa sa-up" data-sa-delay="800">
-                            <div class="conIcon last"> 
-                                <img src="./images/conProcess_4-check.svg" alt="">
+                
+                            <div class="conContBox swiper-slide sa sa-up" data-sa-delay="400">
+                                <div class="conIcon"> 
+                                    <img src="./images/conProcess_2_candidate.svg" alt="">
 
-                            </div>
-            
-                            <div class="conContBottom">
-                                <div class="conContTitle"> 합격 </div>
-                                <div class="conContTxt"> 
-                                    합격 시 알림톡을 통해<br>
-                                    합격 알림 메시지 발송
+                                </div>
+                
+                                <div class="conContBottom">
+                                    <div class="conContTitle"> 본교 온라인접수 </div>
+                                    <div class="conContTxt"> 
+                                        이 페이지 아래에 위치한 <br>
+                                        과정 온라인 접수 신청
+                                    </div>
+                                    <p>*입학 상담을 원할 경우 <br>
+                                        영진직업 전문학교 입학상담 신청 <br>
+                                    </p>
+                                    
                                 </div>
                             </div>
+                
+                            <div class="conContBox swiper-slide sa sa-up" data-sa-delay="600">
+                                <div class="conIcon"> 
+                                    <img src="./images/conProcess_3_discussion.svg" alt="">
+                                    
+                                </div>
+                
+                                <div class="conContBottom">
+                                    <div class="conContTitle"> 담당교수 상담 </div>
+                                    <div class="conContTxt"> 
+                                        온라인접수 후 <br>
+                                        연락가능시간 안에 <br>
+                                        해당 과정 담당 교수와 <br>
+                                        면접진행
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="conContBox swiper-slide sa sa-up" data-sa-delay="800">
+                                <div class="conIcon last"> 
+                                    <img src="./images/conProcess_4_verified.svg" alt="">
+
+                                </div>
+                
+                                <div class="conContBottom">
+                                    <div class="conContTitle"> 합격 </div>
+                                    <div class="conContTxt"> 
+                                        합격 시 알림톡을 통해<br>
+                                        합격 알림 메시지 발송
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
-                        
-                    </div>
-                    <div class="swiper-button-next swiper-arrow"></div>
-                    <div class="swiper-button-prev swiper-arrow"></div>
-                </div>
+                        <div class="swiper-button-next swiper-arrow"></div>
+                        <div class="swiper-button-prev swiper-arrow"></div>
+                    </div> <!--process_swiper-->
+                </div> <!--paginationPosition-->
             </section>
     
             <section id="conMap">
@@ -1095,7 +1162,7 @@
                         미래를 여는 영진직업전문학교
                     </div>
                     <div id="map"></div>
-                    <!-- <script type="text/javascript" 
+                    <script type="text/javascript" 
                             src="//dapi.kakao.com/v2/maps/sdk.js?appkey=322663d9a4492e2805d57c690b2fd97c"></script>
                     <script>
                         // 카카오 지도
@@ -1120,7 +1187,7 @@
                                 
                                 // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
                                 // marker.setMap(null);
-                    </script> -->
+                    </script>
                     <div id="mapBox">
                         <div id="mapTitle">교통 정보</div>
                         <div id="mapBoxs">
@@ -1558,6 +1625,7 @@
                     </div>
                 </div>
             </section>
+            
      
     
         <footer>

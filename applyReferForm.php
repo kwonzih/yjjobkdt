@@ -20,7 +20,7 @@
         $sessionClass = $_SESSION["applyClass"];
         $sessionPhone = $_SESSION["applyPhone"];
 
-        $con = mysqli_connect("localhost", "yjjobkdt", "itsw8877!", "yjjobkdt");
+        $con = mysqli_connect("localhost", "yjjobkdt", "itsw8877%", "yjjobkdt");
         $sql = "select * from apply where class = '$sessionClass' and phone = '$sessionPhone'";
         $result = mysqli_query($con, $sql);
         $row = mysqli_fetch_array($result);

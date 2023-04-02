@@ -41,6 +41,7 @@ a {
 #conForm > #conFormTab > div > img {
     display: none;
     filter: invert(31%) sepia(10%) saturate(2898%) hue-rotate(183deg) brightness(96%) contrast(90%);
+    margin-bottom: 3px;
 }
 #conForm > #conFormTab > div > p {
     width: 100%;
@@ -301,9 +302,11 @@ a {
     }
     #conForm > #conFormTab > div > p {
         margin-top: 10x;
+        align-items: baseline;
     }
     #conForm > #conFormTab > #conCounsel > p {
         margin-top: 2px;
+        align-items: baseline;
     }
     
     /* 입력폼 내용 */

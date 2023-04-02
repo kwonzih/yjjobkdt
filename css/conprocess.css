@@ -45,6 +45,7 @@
     left: 25%;
     top: 0;
     padding-top: 60px;
+    filter: invert(0%) sepia(2%) saturate(8%) hue-rotate(85deg) brightness(97%) contrast(100%);
 }
 #conProcess .conIcon::after
 {
@@ -83,6 +84,14 @@
     font-weight: 400;
     padding-top: 19px;
 }
+@media screen and (max-width:1850px) {
+/* 과정 화살표 중앙 넘어가면 없애기 */
+#conProcess .conIcon::after
+{
+    display: none; 
+    
+}
+}
 @media screen and (max-width:1024px) {
     #conProcess
 {
@@ -102,31 +111,34 @@
     padding-bottom: 0;
 }
 
-/* 슬릭 슬라이더 */
-#conProcess .conIcon::after
-{
-    display: none;
-    
-}
-.swiper-wrapper
+/* 슬라이더 */
+
+#conProcess .swiper-wrapper
 {
     max-width: 100vw;
     width: 100%;
 }
+#conProcess .swiper-slide
+{
+    position: relative;
+    
+}
+/* 동그라미 */
 #conProcess .swiper-arrow::after
 {
     position:absolute;
     z-index:10;
-    top:40%;
-    transform:translateY(-40%);
+    top:70%;
+    transform:translateY(-70%);
     width: 48px;
     height: 48px;
     border-radius:100%;
     background-color: transparent;
-    border: 3px solid #0D1A5A;  
+    border: 4px solid #0D1A5A;  
     display: block; 
     color: transparent;
 }
+/* 화살표 */
 #conProcess .swiper-arrow::before
 {
     width: 100%;

@@ -14,7 +14,7 @@
 
 
     // DB에 온라인접수자 정보 저장
-    $con = mysqli_connect("localhost", "yjjobkdt", "itsw8877!", "yjjobkdt");
+    $con = mysqli_connect("localhost", "yjjobkdt", "itsw8877%", "yjjobkdt");
     $sql = "insert into apply(class, name, birth, gender, phone, start, end, school, major, question) ";
     $sql .= "values('$applyClass', '$applyName', '$applyBirth', '$applyGender', '$applyPhone', '$applyStartTime', '$applyEndTime', '$applySchool', '$applyMajor', '$applyQuestion')";
     mysqli_query($con, $sql);

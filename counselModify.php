@@ -15,7 +15,7 @@
 
 
     // DB에 상담신청자 정보 수정
-    $con = mysqli_connect("localhost", "yjjobkdt", "itsw8877!", "yjjobkdt");
+    $con = mysqli_connect("localhost", "yjjobkdt", "itsw8877%", "yjjobkdt");
     $sql = "update counsel set class='$counselClass', name='$counselName', phone='$counselPhone',
             start='$counselStartTime', end='$counselEndTime', question='$counselQuestion'";
     $sql .= " where class = '$sessionClass' and phone = '$sessionPhone'";

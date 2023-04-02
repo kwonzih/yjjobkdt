@@ -19,7 +19,7 @@
 
 
     // DB에 온라인접수자 정보 수정
-    $con = mysqli_connect("localhost", "yjjobkdt", "itsw8877!", "yjjobkdt");
+    $con = mysqli_connect("localhost", "yjjobkdt", "itsw8877%", "yjjobkdt");
     $sql = "update apply set class='$applyClass', name='$applyName', birth='$applyBirth', gender='$applyGender', phone='$applyPhone',
             start='$applyStartTime', end='$applyEndTime', school='$applySchool', major='$applyMajor', question='$applyQuestion'";
     $sql .= " where class = '$sessionClass' and phone = '$sessionPhone'";

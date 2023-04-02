@@ -1,3 +1,12 @@
+//로딩
+// $(document).ready(function () {
+    
+//     $('.preloader').delay('3000').fadeOut();
+//     $('#container').css('display',"block");
+
+// })
+
+
 // header 스크롤 내릴 때 사라지고, 스크롤 올릴 때 나타남
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
@@ -120,6 +129,18 @@ $(document).ready(function() {
     })
 });
 
+//it과정소개 tab_fixed 클릭시 내용 변경
+$(document).ready(function() {
+    $(".conClassTab_sticky > ul > li").click(function() {
+        let index = $(this).index();
+        $(".conClassTab_sticky > ul > li").removeClass("on");
+        $(".conClassTab_sticky > ul > li").eq(index).addClass("on");
+        $("#conClassItem > div").hide();
+        $("#conClassItem > div").eq(index).show();
+    })
+});
+
+
 
   // 모바일 버전 슬라이더 ( it 과정 세부내용 
 $(document).ready(function () {
@@ -127,7 +148,7 @@ $(document).ready(function () {
     var swiper = new Swiper(".tab_swiper", {
         spaceBetween: 24,
         slidesPerView: 1,
-        rewind: true,
+        loop: true,
         autoplay: {
             delay: 1500,
             disableOnInteraction: false,
@@ -144,93 +165,107 @@ $(document).ready(function () {
             1024: {
                 slidesPerView: 5,
                 spaceBetween: 50,
+                autoplay: false
             },
         } // 반응형 
     }); //탭 슬라이더
+
+    // 클릭시 초기화...메소드 오류 안 나는데 기능은 x
+    // $(".tab_swiper").each(function(elem, target){
+    //     var swp = target.swiper;
+    //     $('#conClassTab > div').click(function() {
+    //         swp.init();
+    //         swp.autoplay.start();
+
+    //     }) //클릭
+    // });
 })
 
-$(document).ready(function () {
 
-    var swiper = new Swiper(".tab_swiper2", {
-        spaceBetween: 24,
+
+
+//리뷰 슬라이더
+$(document).ready(function(){
+  
+     const swiper = new Swiper('.vertical_swiper', {
+  
         slidesPerView: 1,
-        rewind: true,
+        direction: "vertical",
+        loop: true,
+        observer: true,
+        observeParents: true,
         autoplay: {
-            delay: 1500,
+            delay: 5000,
             disableOnInteraction: false,
         },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-            },
-            
-            1024: {
-                slidesPerView: 5,
-                spaceBetween: 50,
-            },
-        } // 반응형 
-    }); //탭 슬라이더
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        }
+  
+  });
+
+  $(".vertical_swiper").each(function(elem, target){
+    var swp = target.swiper;
+    $(this).hover(function() {
+        swp.autoplay.stop();
+    }, function() {
+        swp.autoplay.start();
+    });
+    //클릭시 초기화...메소드 오류 안 나는데 기능은 x
+    $(".vertical_swiper").each(function(elem, target){
+        var swp = target.swiper;
+        $("#conClassTab > div").each(function(elem, target) {
+            $(this).click(function() {
+            swp.init();
+            swp.autoplay.start();
+            console.log("click!");
+        }) //클릭
+    });
+
+});
+  
+
+});
 })
 
-$(document).ready(function () {
+//포트폴리오 슬라이더
+$(document).ready(function(){
     
-    var swiper = new Swiper(".tab_swiper3", {
+    var swiper = new Swiper(".swiper_PF", {
         spaceBetween: 24,
         slidesPerView: 1,
-        rewind: true,
+        loop: true,
         autoplay: {
             delay: 1500,
             disableOnInteraction: false,
         },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
         breakpoints: {
             320: {
-                slidesPerView: 1,
+                slidesPerView: 2,
             },
-            
+            600: {
+                slidesPerView: 3,
+            },
             1024: {
-                slidesPerView: 5,
-                spaceBetween: 50,
+                slidesPerView: 2,
+            },
+            1900: {
+                slidesPerView: 3,
             },
         } // 반응형 
     }); //탭 슬라이더
+
+    $(".swiper_PF").each(function(elem, target){
+        var swp = target.swiper;
+        $(this).hover(function() {
+            swp.autoplay.stop();
+        }, function() {
+            swp.autoplay.start();
+        });
+    });
+        
 })
-
-$("document").ready(function () {
-    
-    var swiper = new Swiper(".tab_swiper4", {
-        spaceBetween: 24,
-        slidesPerView: 1,
-        rewind: true,
-        autoplay: {
-            delay: 1500,
-            disableOnInteraction: false,
-        },
-        navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-        }, 
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-            },
-            
-            1024: {
-                slidesPerView: 5,
-                spaceBetween: 50,
-            },
-        } // 반응형 
-    }); //탭 슬라이더
-
-}) //document 준비완
-
 
 // 접수과정 절차
 $(document).ready(function () {
@@ -262,76 +297,6 @@ $(document).ready(function () {
 }) //document 준비완
 
 
-//리뷰 슬릭슬라이더
-$(document).ready(function(){
-     //  슬라이드 탭 클릭시 슬라이더 작동
-    // var $slider = $('.tab_slide1');
-  
-    // $('#conClassTab > div').click(function(){
-    //   var tabId = $(this).attr('data-tab');
-    //   var setActive = $(this).add('#'+tabId);
-    //   $('.tab, .slick1').removeClass('active'); 
-    //   setActive.addClass('active'); 
-    //   $('.tab_slide1').slick('slickGoTo', 0);
-    // });
-    
-    //     $(".tab_slide1").slick({
-//       autoplay:true,
-//       slidesToShow: 1,
-//       slidesToScroll: 1,
-//       fade: true,
-//       speed: 500,
-//       autoplaySpeed:3000,
-//       cssEase: 'linear',
-//       pauseOnHover:true,
-
-//     });
-// $('.slider').not('.slick-initialized').slick();
-    
-    var swiper = new Swiper(".vertical_swiper", {
-        slidesPerView: 1,
-        direction: "vertical",
-        autoplay: {
-            delay: 1500,
-            disableOnInteraction: false,
-        },
-         
-        
-    }); //탭 슬라이더
-    
-
-  });
-
-//포트폴리오 슬라이더
-$(document).ready(function(){
-    
-    $(".tab_slide2").slick({
-        
-        slide: 'div',
-        autoplay:true, 
-        infinite: true, //무한루프
-        autoplaySpeed:1500,
-        variableWidth: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        pauseOnHover:true,
-        swipe:true,
-        responsive: [ // 반응형 웹 구현 옵션
-				
-					{ 
-						breakpoint: 1024, //화면 사이즈 1024
-						settings: {	
-							//위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-							slidesToShow:2 
-						} 
-					}
-				]
-      }); //슬라이더
-
-    $('.slider').not('.slick-initialized').slick();
-
-        
-})
 
 // 온라인접수 & 상담문의 폼 탭 메뉴
 $(document).ready(function() {
@@ -342,4 +307,4 @@ $(document).ready(function() {
         $("#tap2_img img").hide();
         $("#tap2_img img").eq(idx).show();
     })
-});
+})

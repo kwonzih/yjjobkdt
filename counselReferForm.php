@@ -23,7 +23,7 @@
         $sessionClass = $_SESSION["counselClass"];
         $sessionPhone = $_SESSION["counselPhone"];
 
-        $con = mysqli_connect("localhost", "yjjobkdt", "itsw8877!", "yjjobkdt");
+        $con = mysqli_connect("localhost", "yjjobkdt", "itsw8877%", "yjjobkdt");
         $sql = "select * from counsel where class = '$sessionClass' and phone = '$sessionPhone'";
         $result = mysqli_query($con, $sql);
         $row = mysqli_fetch_array($result);

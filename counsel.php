@@ -10,7 +10,7 @@
 
 
     // DB에 상담신청자 정보 저장
-    $con = mysqli_connect("localhost", "yjjobkdt", "itsw8877!", "yjjobkdt");
+    $con = mysqli_connect("localhost", "yjjobkdt", "itsw8877%", "yjjobkdt");
     $sql = "insert into counsel(class, name, phone, start, end, question) ";
     $sql .= "values('$counselClass', '$counselName', '$counselPhone', '$counselStartTime', '$counselEndTime', '$counselQuestion')";
     mysqli_query($con, $sql);
